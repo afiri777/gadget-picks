@@ -818,7 +818,7 @@ const PRODUCTS = [
     link_sub:    "",
     page:        "life",
     priority:    2,
-    status:      "active"
+    status:      "retired"
   },
   {
     id:          "switchbot-lock-ultra-set",
