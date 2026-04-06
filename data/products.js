@@ -1075,7 +1075,7 @@ const PRODUCTS = [
     fit_good:    "通勤・通学の移動をラクにしたい人・折りたたんで収納・持ち運びしたい人",
     fit_bad:     "自転車を使わない人・保管スペースがない人",
     note:        "20インチ・7段変速・ダブルサスペンション・7.8Ah・250W・免許不要。",
-    price:       "",
+    price:       "¥144,800〜",
     asp:         "yahoo",
     link:        "https://yahoo.jp/TbWbJVEENOUR",
     asp_sub:     "",
