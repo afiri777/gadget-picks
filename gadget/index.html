@@ -248,8 +248,8 @@
         </div>
         <div class="policy-item">
           <div class="icon">🔗</div>
-          <div class="label">Amazonで購入可</div>
-          <div class="desc">すぐ購入できるリンクを掲載しています</div>
+          <div class="label">リンクから確認できる</div>
+          <div class="desc">Yahoo!ショッピング・Amazonのリンクをそのまま掲載しています</div>
         </div>
       </div>
     </div>
@@ -340,8 +340,8 @@
 
   <section class="disclaimer">
     <div class="container">
-      <p>※ 本ページはAmazon.co.jpのアソシエイト・プログラムに参加しています。商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。紹介する商品は独自の基準で選んでおり、掲載費などを受け取っているものはありません。</p>
-      <p>※ 価格・在庫状況はAmazon.co.jpの掲載内容に依存します。購入前に最新情報をご確認ください。</p>
+      <p>※ 本ページはAmazon.co.jpのアソシエイト・プログラムおよびYahoo!ショッピングのアフィリエイトプログラムに参加しています。商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。紹介する商品は独自の基準で選んでおり、掲載費などは受け取っていません。</p>
+      <p>※ 価格・在庫状況は各販売サイトの掲載内容に依存します。購入前に最新情報をご確認ください。</p>
       <p>※ 商品の使用感・効果には個人差があります。</p>
     </div>
   </section>
@@ -349,7 +349,7 @@
 </main>
 
 <footer class="site-footer">
-  <p>© 2026 厳選まとめ — Amazonアソシエイト参加サイト</p>
+  <p>© 2026 厳選まとめ</p>
 </footer>
 
 <!-- ============================================================
@@ -396,6 +396,14 @@
         ? '<span class="badge-rec">' + p.badge + '</span>'
         : '';
 
+      var descHTML = p.description
+        ? '<p class="card-desc">' + p.description + '</p>'
+        : '';
+
+      var priceHTML = p.price
+        ? '<div class="card-price">目安 <strong>' + p.price + '</strong></div>'
+        : '';
+
       var card = document.createElement('div');
       card.className = 'product-card' + (p.featured ? ' featured' : '');
       card.innerHTML =
@@ -411,7 +419,7 @@
           '</div>' +
         '</div>' +
         '<div class="card-body">' +
-          '<p class="card-desc">' + p.description + '</p>' +
+          descHTML +
           '<div class="card-fit">' +
             '<div class="fit-block good">' +
               '<div class="fit-label">👍 向いている人</div>' +
@@ -423,7 +431,7 @@
             '</div>' +
           '</div>' +
           noteHTML +
-          '<div class="card-price">目安 <strong>' + p.price + '</strong></div>' +
+          priceHTML +
           '<a class="btn-cta" href="' + p.link + '" target="_blank" rel="noopener noreferrer">' +
             btnLabel +
           '</a>' +
