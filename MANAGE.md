@@ -11,9 +11,9 @@
 |--------|-----|------|
 | トップ（カテゴリ一覧） | https://afiri777.github.io/gadget-picks/ | ✅ 公開中 |
 | ガジェット・充電グッズ | https://afiri777.github.io/gadget-picks/gadget/ | ✅ 公開中 |
-| デスク・作業効率グッズ | https://afiri777.github.io/gadget-picks/desk/ | 🔲 未着手 |
-| 生活ラクするグッズ | https://afiri777.github.io/gadget-picks/life/ | 🔲 未着手 |
-| 整理・片付けグッズ | https://afiri777.github.io/gadget-picks/organize/ | 🔲 未着手 |
+| デスク・作業効率グッズ | https://afiri777.github.io/gadget-picks/desk/ | ✅ 公開中 |
+| 生活ラクするグッズ | https://afiri777.github.io/gadget-picks/life/ | ✅ 公開中 |
+| 片付け・整理グッズ | https://afiri777.github.io/gadget-picks/organize/ | ✅ 公開中 |
 
 ---
 
@@ -156,7 +156,7 @@ gadget-picks/
 
 ---
 
-### 整理・片付けグッズ（page: organize）
+### 片付け・整理グッズ（page: organize）
 
 #### 未掲載（hold）
 

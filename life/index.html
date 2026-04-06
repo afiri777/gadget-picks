@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="毎日の生活をラクにするグッズを厳選紹介。スマートホーム・ロボット掃除機など、失敗しにくい選び方をまとめました。">
+  <title>生活ラクするグッズ厳選まとめ｜毎日をラクにするものだけ紹介</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f0f0f;
+      --bg-card:   #1a1a1a;
+      --bg-card2:  #222222;
+      --border:    #2e2e2e;
+      --text:      #f0f0f0;
+      --text-sub:  #a0a0a0;
+      --accent:    #d4a843;
+      --accent-dim:#8a6e2b;
+      --btn:       #d4a843;
+      --btn-hover: #e8bf5a;
+      --radius:    12px;
+      --radius-sm: 8px;
+      --shadow:    0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 52px 0; }
+
+    .site-header {
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .site-header .inner {
+      max-width: 680px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .site-header .logo { font-size: 14px; font-weight: 700; color: var(--accent); }
+    .site-header .logo a { color: var(--accent); }
+    .site-header .tagline { font-size: 11px; color: var(--text-sub); }
+
+    .hero { padding: 60px 0 48px; text-align: center; }
+    .hero .badge {
+      display: inline-block;
+      background: var(--accent-dim); color: var(--accent);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+      padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(22px, 6vw, 30px); font-weight: 800;
+      line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero .lead {
+      font-size: 14px; color: var(--text-sub);
+      max-width: 480px; margin: 0 auto 28px; line-height: 1.8;
+    }
+    .hero .for-who { display: inline-flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .for-who .tag {
+      background: var(--bg-card); border: 1px solid var(--border);
+      font-size: 12px; color: var(--text-sub); padding: 5px 12px; border-radius: 20px;
+    }
+
+    .section-title { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 6px; }
+    .section-title span { color: var(--accent); }
+    .section-sub { font-size: 13px; color: var(--text-sub); margin-bottom: 28px; }
+
+    .policy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .policy-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 16px;
+    }
+    .policy-item .icon { font-size: 20px; margin-bottom: 6px; }
+    .policy-item .label { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+    .policy-item .desc { color: var(--text-sub); font-size: 12px; line-height: 1.6; }
+
+    .products { display: flex; flex-direction: column; gap: 20px; }
+    .product-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: border-color 0.2s;
+    }
+    .product-card:hover { border-color: var(--accent-dim); }
+    .product-card.featured { border-color: var(--accent-dim); }
+    .card-header { display: flex; align-items: flex-start; gap: 14px; padding: 20px 20px 0; }
+    .product-img-wrap {
+      flex-shrink: 0; width: 80px; height: 80px;
+      background: var(--bg-card2); border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; overflow: hidden;
+    }
+    .card-meta { flex: 1; min-width: 0; }
+    .card-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+    .badge-rec {
+      background: var(--accent); color: #000;
+      font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px;
+    }
+    .badge-cat {
+      background: var(--bg-card2); border: 1px solid var(--border);
+      color: var(--text-sub); font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    }
+    .card-name { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 4px; }
+    .card-copy { font-size: 12px; color: var(--accent); font-weight: 600; }
+    .card-body { padding: 16px 20px; }
+    .card-desc { font-size: 13px; color: var(--text-sub); line-height: 1.7; margin-bottom: 14px; }
+    .card-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .fit-block { background: var(--bg-card2); border-radius: var(--radius-sm); padding: 10px 12px; }
+    .fit-block .fit-label { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 4px; }
+    .fit-block.good .fit-label { color: #5dbb7c; }
+    .fit-block.bad  .fit-label { color: #c07070; }
+    .fit-block .fit-text { font-size: 12px; color: var(--text-sub); line-height: 1.5; }
+    .card-note {
+      font-size: 12px; color: var(--text-sub);
+      background: var(--bg-card2); border-left: 3px solid var(--accent-dim);
+      padding: 8px 12px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 16px; line-height: 1.6;
+    }
+    .card-price { font-size: 13px; color: var(--text-sub); margin-bottom: 12px; }
+    .card-price strong { font-size: 18px; color: var(--text); font-weight: 800; }
+    .btn-cta {
+      display: block; background: var(--btn); color: #000;
+      font-size: 14px; font-weight: 800; text-align: center;
+      padding: 14px; border-radius: var(--radius-sm);
+      transition: background 0.2s, transform 0.1s; cursor: pointer;
+    }
+    .btn-cta:active { transform: scale(0.98); }
+    @media (hover: hover) { .btn-cta:hover { background: var(--btn-hover); } }
+    .btn-sub {
+      display: block; background: transparent; color: var(--text-sub);
+      font-size: 12px; font-weight: 600; text-align: center;
+      padding: 10px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      margin-top: 8px;
+      transition: border-color 0.2s, color 0.2s; cursor: pointer;
+    }
+    .btn-sub:active { transform: scale(0.98); }
+    @media (hover: hover) { .btn-sub:hover { border-color: var(--text-sub); color: var(--text); } }
+
+    .usecase-list { display: flex; flex-direction: column; gap: 12px; }
+    .usecase-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 16px 18px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .usecase-icon { font-size: 22px; flex-shrink: 0; line-height: 1; padding-top: 2px; }
+    .usecase-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+    .usecase-product { font-size: 13px; color: var(--accent); font-weight: 700; margin-bottom: 2px; }
+    .usecase-reason { font-size: 12px; color: var(--text-sub); }
+
+    .conclusion {
+      background: var(--bg-card); border: 1px solid var(--accent-dim);
+      border-radius: var(--radius); padding: 28px 24px; text-align: center;
+    }
+    .conclusion .label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px; }
+    .conclusion h3 { font-size: 18px; font-weight: 800; line-height: 1.5; margin-bottom: 12px; }
+    .conclusion p { font-size: 13px; color: var(--text-sub); line-height: 1.8; margin-bottom: 20px; }
+
+    .disclaimer { padding: 32px 0; border-top: 1px solid var(--border); }
+    .disclaimer p { font-size: 11px; color: #666; line-height: 1.8; margin-bottom: 8px; }
+
+    .site-footer { background: #0a0a0a; border-top: 1px solid var(--border); padding: 20px; text-align: center; }
+    .site-footer p { font-size: 11px; color: #555; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    @media (max-width: 480px) {
+      .policy-grid { grid-template-columns: 1fr; }
+      .card-fit { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <span class="logo"><a href="../">厳選まとめ</a> / 生活ラクするグッズ</span>
+    <span class="tagline">失敗しにくいものだけ紹介</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge">実際に使って良かったものだけ</div>
+      <h1>毎日の手間を減らす<br><span>生活ラクするグッズ厳選</span></h1>
+      <p class="lead">
+        掃除・防犯・生活自動化、「やらなくていい」に変えられるものだけ選んだ。<br>
+        一度入れると、なかった頃に戻れなくなる。
+      </p>
+      <div class="for-who">
+        <span class="tag">生活の手間を減らしたい人</span>
+        <span class="tag">スマートホームを始めたい人</span>
+        <span class="tag">掃除を自動化したい人</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">このページの<span>選び方</span></h2>
+      <p class="section-sub">こういう基準で選んでいます</p>
+      <div class="policy-grid">
+        <div class="policy-item">
+          <div class="icon">✅</div>
+          <div class="label">実際に使った</div>
+          <div class="desc">自分で試して良かったものを優先しています</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">⚡</div>
+          <div class="label">手間が減る</div>
+          <div class="desc">「やらなくていい」に変えられるものを基準にしています</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">🏠</div>
+          <div class="label">毎日使う</div>
+          <div class="desc">日常生活に組み込める実用品だけを選んでいます</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">🔗</div>
+          <div class="label">すぐ買える</div>
+          <div class="desc">AmazonまたはYahoo!ショッピングで購入できます</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">厳選<span>商品一覧</span></h2>
+      <p class="section-sub" id="product-count"></p>
+      <div class="products" id="products-container"></div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">用途別<span>おすすめ</span></h2>
+      <p class="section-sub">「自分がどれか」で選ぶとズレにくい</p>
+      <div class="usecase-list">
+        <div class="usecase-item">
+          <div class="usecase-icon">🤖</div>
+          <div class="usecase-body">
+            <div class="usecase-title">掃除を完全に自動化したいなら</div>
+            <div class="usecase-product">→ Anker Eufy Robot Vacuum Auto-Empty C10</div>
+            <div class="usecase-reason">自動ゴミ収集付きでゴミ捨て頻度まで減らせる</div>
+          </div>
+        </div>
+        <div class="usecase-item">
+          <div class="usecase-icon">🔐</div>
+          <div class="usecase-body">
+            <div class="usecase-title">鍵の持ち歩きをやめたいなら</div>
+            <div class="usecase-product">→ SwitchBot スマートロック Ultra セット</div>
+            <div class="usecase-reason">顔認証・指紋・静脈認証対応で解錠が完全ハンズフリーになる</div>
+          </div>
+        </div>
+        <div class="usecase-item">
+          <div class="usecase-icon">💡</div>
+          <div class="usecase-body">
+            <div class="usecase-title">エアコンや照明をスマホで操作したいなら</div>
+            <div class="usecase-product">→ SwitchBot Hub Mini（Matter対応）</div>
+            <div class="usecase-reason">赤外線家電をまとめてスマホ操作できるようになる起点</div>
+          </div>
+        </div>
+        <div class="usecase-item">
+          <div class="usecase-icon">📽️</div>
+          <div class="usecase-body">
+            <div class="usecase-title">テレビなしで映像を楽しみたいなら</div>
+            <div class="usecase-product">→ Aladdin X2 Light</div>
+            <div class="usecase-reason">天井設置で照明とプロジェクターが一体化、部屋がすっきりする</div>
+          </div>
+        </div>
+        <div class="usecase-item">
+          <div class="usecase-icon">🧼</div>
+          <div class="usecase-body">
+            <div class="usecase-title">洗面台・キッチンを非接触にしたいなら</div>
+            <div class="usecase-product">→ Umimile 自動泡ハンドソープディスペンサー</div>
+            <div class="usecase-reason">センサーで自動噴出、触らずに使えて衛生的</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="container">
+      <div class="conclusion">
+        <div class="label">▶ 迷ったらこれ</div>
+        <h3>生活の手間を一番減らしたいなら<br>ロボット掃除機から入るのが正解</h3>
+        <p>
+          「掃除しなくていい」になるだけで、毎日の気分が変わる。<br>
+          自動ゴミ収集付きのC10なら、ゴミ捨て頻度まで減らせる。<br>
+          スマートホーム化は一気にやらなくていい。まず掃除から自動化するのが一番効果が大きい。
+        </p>
+        <a class="btn-cta" href="https://yahoo.jp/h6EvjU6" target="_blank" rel="noopener noreferrer">
+          Eufy Robot Vacuum C10 をYahoo!ショッピングで見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="disclaimer">
+    <div class="container">
+      <p>※ 本ページはAmazon.co.jpのアソシエイト・プログラムおよびYahoo!ショッピングのアフィリエイトプログラムに参加しています。商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。紹介する商品は独自の基準で選んでおり、掲載費などを受け取っているものはありません。</p>
+      <p>※ 価格・在庫状況は各販売サイトの掲載内容に依存します。購入前に最新情報をご確認ください。</p>
+      <p>※ 商品の使用感・効果には個人差があります。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 厳選まとめ</p>
+</footer>
+
+<script src="../data/products.js"></script>
+<script>
+  (function () {
+    var container = document.getElementById('products-container');
+    var countEl   = document.getElementById('product-count');
+
+    var items = PRODUCTS
+      .filter(function(p){ return p.page === 'life' && p.status === 'active'; })
+      .sort(function(a, b){ return a.priority - b.priority; });
+
+    countEl.textContent = '全部で' + items.length + '点。絞り込んでいます。';
+
+    items.forEach(function(p) {
+      var btnLabel = p.asp === 'yahoo'
+        ? 'Yahoo!ショッピングで見る →'
+        : 'Amazonで見る →';
+
+      var subBtnHTML = '';
+      if (p.asp_sub && p.link_sub) {
+        var subLabel = p.asp_sub === 'yahoo'
+          ? 'Yahoo!ショッピングでも見る'
+          : 'Amazonでも見る';
+        subBtnHTML =
+          '<a class="btn-sub" href="' + p.link_sub + '" target="_blank" rel="noopener noreferrer">' +
+            subLabel +
+          '</a>';
+      }
+
+      var noteHTML = p.note
+        ? '<div class="card-note">' + p.note + '</div>'
+        : '';
+
+      var recBadgeHTML = (p.featured && p.badge)
+        ? '<span class="badge-rec">' + p.badge + '</span>'
+        : '';
+
+      var descHTML = p.description
+        ? '<p class="card-desc">' + p.description + '</p>'
+        : '';
+
+      var priceHTML = p.price
+        ? '<div class="card-price">目安 <strong>' + p.price + '</strong></div>'
+        : '';
+
+      var card = document.createElement('div');
+      card.className = 'product-card' + (p.featured ? ' featured' : '');
+      card.innerHTML =
+        '<div class="card-header">' +
+          '<div class="product-img-wrap">' + p.icon + '</div>' +
+          '<div class="card-meta">' +
+            '<div class="card-badges">' +
+              recBadgeHTML +
+              '<span class="badge-cat">' + p.category + '</span>' +
+            '</div>' +
+            '<div class="card-name">' + p.name + '</div>' +
+            '<div class="card-copy">' + p.copy + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="card-body">' +
+          descHTML +
+          '<div class="card-fit">' +
+            '<div class="fit-block good">' +
+              '<div class="fit-label">👍 向いている人</div>' +
+              '<div class="fit-text">' + p.fit_good + '</div>' +
+            '</div>' +
+            '<div class="fit-block bad">' +
+              '<div class="fit-label">👎 向いていない人</div>' +
+              '<div class="fit-text">' + p.fit_bad + '</div>' +
+            '</div>' +
+          '</div>' +
+          noteHTML +
+          priceHTML +
+          '<a class="btn-cta" href="' + p.link + '" target="_blank" rel="noopener noreferrer">' +
+            btnLabel +
+          '</a>' +
+          subBtnHTML +
+        '</div>';
+
+      container.appendChild(card);
+    });
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(
+        function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) {
+              e.target.style.opacity = '1';
+              e.target.style.transform = 'translateY(0)';
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.product-card, .usecase-item, .policy-item').forEach(function(el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(16px)';
+        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        observer.observe(el);
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
