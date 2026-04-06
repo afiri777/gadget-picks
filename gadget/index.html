@@ -137,6 +137,7 @@
     }
     .card-price { font-size: 13px; color: var(--text-sub); margin-bottom: 12px; }
     .card-price strong { font-size: 18px; color: var(--text); font-weight: 800; }
+    /* 主導線ボタン */
     .btn-cta {
       display: block; background: var(--btn); color: #000;
       font-size: 14px; font-weight: 800; text-align: center;
@@ -145,6 +146,18 @@
     }
     .btn-cta:active { transform: scale(0.98); }
     @media (hover: hover) { .btn-cta:hover { background: var(--btn-hover); } }
+
+    /* 補助導線ボタン（主導線より控えめなデザイン） */
+    .btn-sub {
+      display: block; background: transparent; color: var(--text-sub);
+      font-size: 12px; font-weight: 600; text-align: center;
+      padding: 10px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      margin-top: 8px;
+      transition: border-color 0.2s, color 0.2s; cursor: pointer;
+    }
+    .btn-sub:active { transform: scale(0.98); }
+    @media (hover: hover) { .btn-sub:hover { border-color: var(--text-sub); color: var(--text); } }
 
     /* 用途別 */
     .usecase-list { display: flex; flex-direction: column; gap: 12px; }
@@ -357,10 +370,23 @@
     countEl.textContent = '全部で' + items.length + '点。絞り込んでいます。';
 
     items.forEach(function(p) {
-      // ASPでボタン文言を切り替え（Yahoo登録後は asp:"yahoo" にするだけで変わる）
+      // ---- 主導線ボタン文言（ASPで自動切り替え） ----
       var btnLabel = p.asp === 'yahoo'
         ? 'Yahoo!ショッピングで見る →'
         : 'Amazonで見る →';
+
+      // ---- 補助導線ボタン（asp_subが設定されている場合のみ表示） ----
+      // 同一商品の重複表示を避けるため、補助ボタンは最大1つ・控えめなデザインで出す
+      var subBtnHTML = '';
+      if (p.asp_sub && p.link_sub) {
+        var subLabel = p.asp_sub === 'yahoo'
+          ? 'Yahoo!ショッピングでも見る'
+          : 'Amazonでも見る';
+        subBtnHTML =
+          '<a class="btn-sub" href="' + p.link_sub + '" target="_blank" rel="noopener noreferrer">' +
+            subLabel +
+          '</a>';
+      }
 
       var noteHTML = p.note
         ? '<div class="card-note">' + p.note + '</div>'
@@ -401,6 +427,7 @@
           '<a class="btn-cta" href="' + p.link + '" target="_blank" rel="noopener noreferrer">' +
             btnLabel +
           '</a>' +
+          subBtnHTML +
         '</div>';
 
       container.appendChild(card);

@@ -3,6 +3,19 @@
 //  商品の追加・更新・リンク差し替えはここだけ編集する
 //  HTMLは自動でここから読み込んでレンダリングする
 // ============================================================
+//
+//  【ASP設定ルール】
+//  asp       : 主導線。"amazon" or "yahoo"
+//  link      : 主導線のアフィリリンク
+//  asp_sub   : 補助導線（任意）。"amazon" or "yahoo"。不要なら "" にする
+//  link_sub  : 補助導線のリンク。asp_sub が空なら "" でOK
+//
+//  【主導線の判断基準】
+//  - PayPay需要が強い・Yahoo訴求が自然な商品 → asp: "yahoo"
+//  - Amazonの方が自然・ブランド直販感がある商品 → asp: "amazon"
+//  - 両方見せたい場合のみ asp_sub を設定する（多用しない）
+//
+// ============================================================
 
 const PRODUCTS = [
 
@@ -16,7 +29,7 @@ const PRODUCTS = [
     brand:       "Anker",
     category:    "モバイルバッテリー",
     icon:        "🔋",
-    featured:    true,                   // イチ推しバッジを表示するか
+    featured:    true,          // イチ推しバッジを表示するか
     badge:       "イチ推し",
     copy:        "ケーブル内蔵・Apple Watch充電・MagSafe対応の全部入り",
     description: "ケーブルを別に持ち歩く必要がなく、Apple WatchもiPhoneも一台で充電できる。10000mAhで容量も十分。LEDディスプレイで残量が数字で確認できるのも地味に便利。",
@@ -24,11 +37,13 @@ const PRODUCTS = [
     fit_bad:     "Android中心・MagSafe不要・とにかく安く抑えたい",
     note:        "MagSafe対応なのでiPhone背面に貼り付けながら充電できる。USB-Cケーブルが本体内蔵なので手ぶらで出かけても安心。",
     price:       "¥8,000〜",
-    asp:         "amazon",               // "amazon" or "yahoo"
+    asp:         "amazon",      // 主導線ASP
     link:        "https://amzn.to/3PUltwW",
+    asp_sub:     "",            // 補助導線ASP（不要なら空文字）
+    link_sub:    "",            // 補助導線リンク（不要なら空文字）
     page:        "gadget",
-    priority:    1,                      // 数字が小さいほど上に表示
-    status:      "active"               // "active" / "hold" / "retired"
+    priority:    1,             // 数字が小さいほど上に表示
+    status:      "active"      // "active" / "hold" / "retired"
   },
 
   {
@@ -47,6 +62,8 @@ const PRODUCTS = [
     price:       "¥5,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/4smQlnn",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    2,
     status:      "active"
@@ -68,6 +85,8 @@ const PRODUCTS = [
     price:       "¥3,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/4vkp9IL",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    3,
     status:      "active"
@@ -89,6 +108,8 @@ const PRODUCTS = [
     price:       "¥8,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/3Qn8rYU",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    4,
     status:      "active"
@@ -110,6 +131,8 @@ const PRODUCTS = [
     price:       "¥20,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/4c6Ma8X",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    5,
     status:      "active"
@@ -131,6 +154,8 @@ const PRODUCTS = [
     price:       "¥2,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/4cbVOHG",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    6,
     status:      "active"
@@ -152,6 +177,8 @@ const PRODUCTS = [
     price:       "¥8,000〜",
     asp:         "amazon",
     link:        "https://amzn.to/4e4meNW",
+    asp_sub:     "",
+    link_sub:    "",
     page:        "gadget",
     priority:    7,
     status:      "active"
