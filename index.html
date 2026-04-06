@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="実際に使って良かったガジェット・便利グッズを厳選紹介。失敗しにくい選び方と向いている人を明確にまとめました。">
+  <title>失敗しないガジェット厳選まとめ｜使って良かったものだけ紹介</title>
+  <style>
+    /* =====================
+       リセット・基本設定
+    ===================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:        #0f0f0f;
+      --bg-card:   #1a1a1a;
+      --bg-card2:  #222222;
+      --border:    #2e2e2e;
+      --text:      #f0f0f0;
+      --text-sub:  #a0a0a0;
+      --accent:    #d4a843;   /* ゴールドアクセント */
+      --accent-dim:#8a6e2b;
+      --btn:       #d4a843;
+      --btn-hover: #e8bf5a;
+      --radius:    12px;
+      --radius-sm: 8px;
+      --shadow:    0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Noto Sans JP", sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* =====================
+       レイアウト
+    ===================== */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 52px 0;
+    }
+
+    /* =====================
+       ヘッダー
+    ===================== */
+    .site-header {
+      background: #0a0a0a;
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .site-header .inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-header .logo {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+
+    .site-header .tagline {
+      font-size: 11px;
+      color: var(--text-sub);
+      letter-spacing: 0.03em;
+    }
+
+    /* =====================
+       ファーストビュー
+    ===================== */
+    .hero {
+      padding: 60px 0 48px;
+      text-align: center;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(22px, 6vw, 30px);
+      font-weight: 800;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero .lead {
+      font-size: 14px;
+      color: var(--text-sub);
+      max-width: 480px;
+      margin: 0 auto 28px;
+      line-height: 1.8;
+    }
+
+    .hero .for-who {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .for-who .tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-sub);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* =====================
+       セクションタイトル
+    ===================== */
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .section-title span {
+      color: var(--accent);
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 28px;
+    }
+
+    /* =====================
+       選定方針
+    ===================== */
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .policy-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      font-size: 13px;
+    }
+
+    .policy-item .icon {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .policy-item .label {
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .policy-item .desc {
+      color: var(--text-sub);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* =====================
+       商品カード
+    ===================== */
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: border-color 0.2s;
+    }
+
+    .product-card:hover {
+      border-color: var(--accent-dim);
+    }
+
+    /* おすすめバッジ付きカード */
+    .product-card.featured {
+      border-color: var(--accent-dim);
+    }
+
+    .product-card .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 20px 0;
+    }
+
+    /* =====================
+       商品画像エリア
+       （実際の画像が入るまでのプレースホルダー）
+    ===================== */
+    .product-img-wrap {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      background: var(--bg-card2);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      overflow: hidden;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+    }
+
+    .card-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .badge-rec {
+      background: var(--accent);
+      color: #000;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-cat {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      color: var(--text-sub);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .card-copy {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .card-body {
+      padding: 16px 20px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .card-fit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .fit-block {
+      background: var(--bg-card2);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+    }
+
+    .fit-block .fit-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .fit-block.good .fit-label { color: #5dbb7c; }
+    .fit-block.bad  .fit-label { color: #c07070; }
+
+    .fit-block .fit-text {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    .card-note {
+      font-size: 12px;
+      color: var(--text-sub);
+      background: var(--bg-card2);
+      border-left: 3px solid var(--accent-dim);
+      padding: 8px 12px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .card-price {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+    }
+
+    .card-price strong {
+      font-size: 18px;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .card-price .paypay {
+      font-size: 11px;
+      color: #e06b6b;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    /* CTAボタン */
+    .btn-yahoo {
+      display: block;
+      background: var(--btn);
+      color: #000;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.04em;
+      transition: background 0.2s, transform 0.1s;
+      cursor: pointer;
+    }
+
+    .btn-yahoo:active {
+      transform: scale(0.98);
+    }
+
+    @media (hover: hover) {
+      .btn-yahoo:hover {
+        background: var(--btn-hover);
+      }
+    }
+
+    /* =====================
+       用途別おすすめ
+    ===================== */
+    .usecase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .usecase-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .usecase-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .usecase-body {}
+
+    .usecase-title {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .usecase-product {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .usecase-reason {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    /* =====================
+       迷った人への結論
+    ===================== */
+    .conclusion {
+      background: var(--bg-card);
+      border: 1px solid var(--accent-dim);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .conclusion .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .conclusion h3 {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .conclusion p {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* =====================
+       注意書き・アフィリエイト表記
+    ===================== */
+    .disclaimer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .disclaimer p {
+      font-size: 11px;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .disclaimer a {
+      color: #777;
+      text-decoration: underline;
+    }
+
+    /* =====================
+       フッター
+    ===================== */
+    .site-footer {
+      background: #0a0a0a;
+      border-top: 1px solid var(--border);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-size: 11px;
+      color: #555;
+    }
+
+    /* =====================
+       ディバイダー
+    ===================== */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* =====================
+       レスポンシブ
+    ===================== */
+    @media (max-width: 480px) {
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-fit {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================
+     ヘッダー
+================== -->
+<header class="site-header">
+  <div class="inner">
+    <span class="logo">厳選ガジェットまとめ</span>
+    <span class="tagline">失敗しにくいものだけ紹介</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==================
+       ファーストビュー
+  ================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">実際に使って良かったものだけ</div>
+      <h1>
+        迷わず選べる<br>
+        <span>ガジェット厳選まとめ</span>
+      </h1>
+      <p class="lead">
+        数を揃えるより、失敗しにくいものだけ。<br>
+        「誰向けか」「どこが良いか」を短くまとめました。
+      </p>
+      <div class="for-who">
+        <span class="tag">ガジェット迷子な人</span>
+        <span class="tag">レビューを読む時間がない人</span>
+        <span class="tag">失敗を減らしたい人</span>
+        <span class="tag">PayPayユーザー</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ==================
+       選定方針
+  ================== -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">このページの<span>選び方</span></h2>
+      <p class="section-sub">こういう基準で選んでいます</p>
+      <div class="policy-grid">
+        <div class="policy-item">
+          <div class="icon">✅</div>
+          <div class="label">実際に使った</div>
+          <div class="desc">自分で試して良かったものを優先しています</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">🎯</div>
+          <div class="label">用途が明確</div>
+          <div class="desc">「何に使うか」がハッキリしているものだけ載せています</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">📦</div>
+          <div class="label">コスパ重視</div>
+          <div class="desc">値段に見合っているかどうかを基準にしています</div>
+        </div>
+        <div class="policy-item">
+          <div class="icon">💳</div>
+          <div class="label">PayPay対応</div>
+          <div class="desc">Yahoo!ショッピングで買えるのでPayPay還元が使えます</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ==================
+       商品一覧
+  ================== -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">厳選<span>商品一覧</span></h2>
+      <p class="section-sub">全部で5点。絞り込んでいます。</p>
+
+      <div class="products">
+
+        <!-- ========== 商品①（おすすめ筆頭） ========== -->
+        <!-- ▼▼▼ 商品①を差し替える場合はここを編集 ▼▼▼ -->
+        <div class="product-card featured">
+          <div class="card-header">
+            <div class="product-img-wrap">
+              <!-- ▼ 商品画像URL or 絵文字 -->
+              🔋
+            </div>
+            <div class="card-meta">
+              <div class="card-badges">
+                <span class="badge-rec">イチ推し</span>
+                <span class="badge-cat">モバイルバッテリー</span>
+              </div>
+              <!-- ▼ 商品名 -->
+              <div class="card-name">Anker PowerCore 10000</div>
+              <!-- ▼ 一言コピー -->
+              <div class="card-copy">「薄くて軽い」を妥協しなかった一台</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- ▼ 説明文（2〜3文） -->
+            <p class="card-desc">
+              容量と携帯性のバランスが一番取れていると感じた。スマホ2.5回分充電できて、ズボンのポケットにも入る。Ankerは品質が安定しているので外れがない。
+            </p>
+            <div class="card-fit">
+              <div class="fit-block good">
+                <div class="fit-label">👍 向いている人</div>
+                <!-- ▼ 向いている人 -->
+                <div class="fit-text">毎日持ち歩きたい・外出が多い・荷物を減らしたい</div>
+              </div>
+              <div class="fit-block bad">
+                <div class="fit-label">👎 向いていない人</div>
+                <!-- ▼ 向いていない人 -->
+                <div class="fit-text">大容量で家でも使いたい・複数台を同時充電したい</div>
+              </div>
+            </div>
+            <!-- ▼ 補足コメント（なければ削除可） -->
+            <div class="card-note">
+              急速充電対応のケーブルが別途必要な場合あり。ケーブルセットも一緒に検討するのがおすすめ。
+            </div>
+            <!-- ▼ 価格帯（目安） -->
+            <div class="card-price">
+              目安 <strong>¥2,990〜</strong>
+              <span class="paypay">PayPay還元あり</span>
+            </div>
+            <!-- ▼ Yahoo!ショッピングのアフィリエイトリンクに差し替え -->
+            <a class="btn-yahoo"
+               href="https://shopping.yahoo.co.jp/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Amazonで見る →
+            </a>
+          </div>
+        </div>
+        <!-- ▲▲▲ 商品① ここまで ▲▲▲ -->
+
+        <!-- ========== 商品② ========== -->
+        <!-- ▼▼▼ 商品②を差し替える場合はここを編集 ▼▼▼ -->
+        <div class="product-card">
+          <div class="card-header">
+            <div class="product-img-wrap">🔌</div>
+            <div class="card-meta">
+              <div class="card-badges">
+                <span class="badge-cat">充電器</span>
+              </div>
+              <div class="card-name">Anker 65W USB-C GaN充電器</div>
+              <div class="card-copy">ノートPCもスマホも1個で済む</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              ノートPCとスマホを同時に充電できて、充電器が1個に集約できる。GaN採用で熱が出にくく、コンセント1口を節約できるのが地味に便利。
+            </p>
+            <div class="card-fit">
+              <div class="fit-block good">
+                <div class="fit-label">👍 向いている人</div>
+                <div class="fit-text">MacBook / iPad / スマホを使っている・外出先でも充電したい</div>
+              </div>
+              <div class="fit-block bad">
+                <div class="fit-label">👎 向いていない人</div>
+                <div class="fit-text">USB-A機器しか使わない・自宅専用で持ち運ばない</div>
+              </div>
+            </div>
+            <div class="card-note">
+              USB-Cポートが2口あるものを選ぶと、スマホとPCを同時充電できて便利。
+            </div>
+            <div class="card-price">
+              目安 <strong>¥3,490〜</strong>
+              <span class="paypay">PayPay還元あり</span>
+            </div>
+            <!-- ▼ アフィリエイトリンクに差し替え -->
+            <a class="btn-yahoo"
+               href="https://shopping.yahoo.co.jp/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Amazonで見る →
+            </a>
+          </div>
+        </div>
+        <!-- ▲▲▲ 商品② ここまで ▲▲▲ -->
+
+        <!-- ========== 商品③ ========== -->
+        <!-- ▼▼▼ 商品③を差し替える場合はここを編集 ▼▼▼ -->
+        <div class="product-card">
+          <div class="card-header">
+            <div class="product-img-wrap">🎧</div>
+            <div class="card-meta">
+              <div class="card-badges">
+                <span class="badge-cat">イヤホン</span>
+              </div>
+              <div class="card-name">Anker Soundcore P20i</div>
+              <div class="card-copy">「安くていい音」の現実解</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              完全ワイヤレスで3,000円台。音質は価格以上で、装着感も安定している。紛失しても買い直しやすい価格帯なのが、毎日使う上では正直助かる。
+            </p>
+            <div class="card-fit">
+              <div class="fit-block good">
+                <div class="fit-label">👍 向いている人</div>
+                <div class="fit-text">コスパ重視・外出中や作業中に使いたい・なくすのが怖い</div>
+              </div>
+              <div class="fit-block bad">
+                <div class="fit-label">👎 向いていない人</div>
+                <div class="fit-text">音質にこだわる・ノイキャン必須・ハイエンドが欲しい</div>
+              </div>
+            </div>
+            <div class="card-price">
+              目安 <strong>¥3,490〜</strong>
+              <span class="paypay">PayPay還元あり</span>
+            </div>
+            <a class="btn-yahoo"
+               href="https://shopping.yahoo.co.jp/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Amazonで見る →
+            </a>
+          </div>
+        </div>
+        <!-- ▲▲▲ 商品③ ここまで ▲▲▲ -->
+
+        <!-- ========== 商品④ ========== -->
+        <!-- ▼▼▼ 商品④を差し替える場合はここを編集 ▼▼▼ -->
+        <div class="product-card">
+          <div class="card-header">
+            <div class="product-img-wrap">🖥️</div>
+            <div class="card-meta">
+              <div class="card-badges">
+                <span class="badge-cat">USBハブ</span>
+              </div>
+              <div class="card-name">UGREEN USB-C ハブ 7-in-1</div>
+              <div class="card-copy">Macbook1口問題を一発解決</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              USB-C1口しかないノートPCに差すと、HDMI・USB-A×3・SDカードなどが揃う。デスクに置きっぱなしでも邪魔にならないサイズ感。
+            </p>
+            <div class="card-fit">
+              <div class="fit-block good">
+                <div class="fit-label">👍 向いている人</div>
+                <div class="fit-text">MacBookやiPad Pro使い・外部モニターに繋ぎたい・ポートが足りない</div>
+              </div>
+              <div class="fit-block bad">
+                <div class="fit-label">👎 向いていない人</div>
+                <div class="fit-text">WindowsでUSB-Aが十分ある・持ち運び不要</div>
+              </div>
+            </div>
+            <div class="card-note">
+              4K出力対応モデルを選ぶと、外部モニターもキレイに映せる。
+            </div>
+            <div class="card-price">
+              目安 <strong>¥4,480〜</strong>
+              <span class="paypay">PayPay還元あり</span>
+            </div>
+            <a class="btn-yahoo"
+               href="https://shopping.yahoo.co.jp/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Amazonで見る →
+            </a>
+          </div>
+        </div>
+        <!-- ▲▲▲ 商品④ ここまで ▲▲▲ -->
+
+        <!-- ========== 商品⑤ ========== -->
+        <!-- ▼▼▼ 商品⑤を差し替える場合はここを編集 ▼▼▼ -->
+        <div class="product-card">
+          <div class="card-header">
+            <div class="product-img-wrap">🗄️</div>
+            <div class="card-meta">
+              <div class="card-badges">
+                <span class="badge-cat">ケーブル管理</span>
+              </div>
+              <div class="card-name">ケーブルオーガナイザー（面ファスナー式）</div>
+              <div class="card-copy">机の上のぐちゃぐちゃが2分で片付く</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-desc">
+              充電ケーブルやイヤホンをまとめるだけ。デスク回りのごちゃつきが一気に減る。1袋に複数入っているのでコスパも高い。
+            </p>
+            <div class="card-fit">
+              <div class="fit-block good">
+                <div class="fit-label">👍 向いている人</div>
+                <div class="fit-text">デスク周りが散らかりがち・ケーブルが多い・テレワーク環境を整えたい</div>
+              </div>
+              <div class="fit-block bad">
+                <div class="fit-label">👎 向いていない人</div>
+                <div class="fit-text">ケーブルが1〜2本しかない・整理に興味がない</div>
+              </div>
+            </div>
+            <div class="card-price">
+              目安 <strong>¥980〜</strong>
+              <span class="paypay">PayPay還元あり</span>
+            </div>
+            <a class="btn-yahoo"
+               href="https://shopping.yahoo.co.jp/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Amazonで見る →
+            </a>
+          </div>
+        </div>
+        <!-- ▲▲▲ 商品⑤ ここまで ▲▲▲ -->
+
+      </div><!-- /.products -->
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ==================
+       用途別おすすめ
+  ================== -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">用途別<span>おすすめ</span></h2>
+      <p class="section-sub">「自分がどれか」で選ぶとズレにくい</p>
+
+      <div class="usecase-list">
+
+        <div class="usecase-item">
+          <div class="usecase-icon">🚶</div>
+          <div class="usecase-body">
+            <div class="usecase-title">毎日持ち歩くなら</div>
+            <div class="usecase-product">→ Anker PowerCore 10000</div>
+            <div class="usecase-reason">軽さと容量のバランスが一番取れている</div>
+          </div>
+        </div>
+
+        <div class="usecase-item">
+          <div class="usecase-icon">💻</div>
+          <div class="usecase-body">
+            <div class="usecase-title">MacBook使いなら</div>
+            <div class="usecase-product">→ UGREEN USB-C ハブ ＋ Anker充電器</div>
+            <div class="usecase-reason">ポート不足と充電を一気に解決できる</div>
+          </div>
+        </div>
+
+        <div class="usecase-item">
+          <div class="usecase-icon">🎧</div>
+          <div class="usecase-body">
+            <div class="usecase-title">コスパ重視でイヤホンが欲しいなら</div>
+            <div class="usecase-product">→ Anker Soundcore P20i</div>
+            <div class="usecase-reason">3,000円台でこれだけ使えれば十分</div>
+          </div>
+        </div>
+
+        <div class="usecase-item">
+          <div class="usecase-icon">🖥️</div>
+          <div class="usecase-body">
+            <div class="usecase-title">テレワーク環境を整えたいなら</div>
+            <div class="usecase-product">→ ケーブルオーガナイザー ＋ USB-Cハブ</div>
+            <div class="usecase-reason">デスク周りのごちゃつきが見た目からも変わる</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ==================
+       迷った人への結論
+  ================== -->
+  <section>
+    <div class="container">
+      <div class="conclusion">
+        <div class="label">▶ 迷ったらこれ</div>
+        <h3>最初の1個は<br>モバイルバッテリーで間違いない</h3>
+        <p>
+          充電できなくて困る場面は誰にでもある。<br>
+          Anker PowerCore 10000は軽くて信頼性が高く、<br>
+          値段も3,000円前後。一番外れにくい選択肢です。<br>
+          「何を買えばいいか分からない」なら、まずこれ。
+        </p>
+        <!-- ▼ アフィリエイトリンクに差し替え -->
+        <a class="btn-yahoo"
+           href="https://shopping.yahoo.co.jp/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Anker PowerCore をAmazonで見る →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ==================
+       注意書き・アフィリエイト表記
+  ================== -->
+  <section class="disclaimer">
+    <div class="container">
+      <!-- ▼ 必須：アフィリエイト表記 -->
+      <p>
+        ※ 本ページはAmazon.co.jpのアソシエイト・プログラムに参加しています。
+        商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。
+        紹介する商品は独自の基準で選んでおり、掲載費などを受け取っているものはありません。
+      </p>
+      <p>
+        ※ 価格・在庫状況はAmazon.co.jpの掲載内容に依存します。
+        購入前に最新情報をご確認ください。
+      </p>
+      <p>
+        ※ 商品の特性上、個人差が生じる場合があります。
+        使用感や効果には個人差があります。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================
+     フッター
+================== -->
+<footer class="site-footer">
+  <p>© 2026 厳選ガジェットまとめ — Amazonアソシエイト参加サイト</p>
+</footer>
+
+<!-- ==================
+     簡易スクロールアニメーション
+================== -->
+<script>
+  // 商品カードをスクロール時にフワッと表示
+  const cards = document.querySelectorAll('.product-card, .usecase-item, .policy-item');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      observer.observe(card);
+    });
+  }
+</script>
+
+</body>
+</html>
