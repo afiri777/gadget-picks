@@ -3,84 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="実際に使って良かったガジェット・便利グッズを厳選紹介。失敗しにくい選び方と向いている人を明確にまとめました。">
-  <title>失敗しないガジェット厳選まとめ｜使って良かったものだけ紹介</title>
+  <meta name="description" content="失敗しにくい商品だけを厳選して紹介しています。ガジェット・便利グッズなど、カテゴリ別にまとめています。">
+  <title>厳選まとめサイト｜失敗しにくいものだけ紹介</title>
   <style>
-    /* =====================
-       リセット・基本設定
-    ===================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0f0f0f;
-      --bg-card:   #1a1a1a;
-      --bg-card2:  #222222;
-      --border:    #2e2e2e;
-      --text:      #f0f0f0;
-      --text-sub:  #a0a0a0;
-      --accent:    #d4a843;   /* ゴールドアクセント */
+      --bg:       #0f0f0f;
+      --bg-card:  #1a1a1a;
+      --border:   #2e2e2e;
+      --text:     #f0f0f0;
+      --text-sub: #a0a0a0;
+      --accent:   #d4a843;
       --accent-dim:#8a6e2b;
-      --btn:       #d4a843;
-      --btn-hover: #e8bf5a;
-      --radius:    12px;
-      --radius-sm: 8px;
-      --shadow:    0 4px 24px rgba(0,0,0,0.5);
-    }
-
-    html {
-      scroll-behavior: smooth;
+      --radius:   12px;
+      --radius-sm:8px;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
-                   "Noto Sans JP", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
       font-size: 15px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* =====================
-       レイアウト
-    ===================== */
     .container {
       max-width: 680px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
-    section {
-      padding: 52px 0;
-    }
-
-    /* =====================
-       ヘッダー
-    ===================== */
+    /* ヘッダー */
     .site-header {
       background: #0a0a0a;
       border-bottom: 1px solid var(--border);
       padding: 16px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
-
     .site-header .inner {
       max-width: 680px;
       margin: 0 auto;
@@ -88,28 +50,14 @@
       align-items: center;
       justify-content: space-between;
     }
+    .site-header .logo { font-size: 14px; font-weight: 700; color: var(--accent); }
+    .site-header .tagline { font-size: 11px; color: var(--text-sub); }
 
-    .site-header .logo {
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--accent);
-    }
-
-    .site-header .tagline {
-      font-size: 11px;
-      color: var(--text-sub);
-      letter-spacing: 0.03em;
-    }
-
-    /* =====================
-       ファーストビュー
-    ===================== */
+    /* ヒーロー */
     .hero {
-      padding: 60px 0 48px;
+      padding: 56px 0 40px;
       text-align: center;
     }
-
     .hero .badge {
       display: inline-block;
       background: var(--accent-dim);
@@ -119,949 +67,195 @@
       letter-spacing: 0.08em;
       padding: 4px 12px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-
     .hero h1 {
-      font-size: clamp(22px, 6vw, 30px);
+      font-size: clamp(22px, 6vw, 28px);
       font-weight: 800;
       line-height: 1.4;
-      letter-spacing: -0.01em;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero .lead {
-      font-size: 14px;
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 13px;
       color: var(--text-sub);
-      max-width: 480px;
-      margin: 0 auto 28px;
       line-height: 1.8;
     }
 
-    .hero .for-who {
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
+    /* カテゴリグリッド */
+    .categories {
+      padding: 40px 0 60px;
     }
-
-    .for-who .tag {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text-sub);
-      padding: 5px 12px;
-      border-radius: 20px;
-    }
-
-    /* =====================
-       セクションタイトル
-    ===================== */
     .section-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 800;
-      letter-spacing: -0.01em;
-      margin-bottom: 6px;
-    }
-
-    .section-title span {
-      color: var(--accent);
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 28px;
-    }
-
-    /* =====================
-       選定方針
-    ===================== */
-    .policy-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .policy-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 16px;
-      font-size: 13px;
-    }
-
-    .policy-item .icon {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-
-    .policy-item .label {
-      font-weight: 700;
-      font-size: 13px;
       margin-bottom: 4px;
     }
-
-    .policy-item .desc {
-      color: var(--text-sub);
+    .section-title span { color: var(--accent); }
+    .section-sub {
       font-size: 12px;
-      line-height: 1.6;
+      color: var(--text-sub);
+      margin-bottom: 24px;
     }
 
-    /* =====================
-       商品カード
-    ===================== */
-    .products {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .cat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
-    .product-card {
+    /* ========================================
+       カテゴリカード
+       新カテゴリを追加するときは .cat-card を
+       コピーして href・絵文字・テキストを変えるだけ
+    ======================================== */
+    .cat-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: border-color 0.2s;
-    }
-
-    .product-card:hover {
-      border-color: var(--accent-dim);
-    }
-
-    /* おすすめバッジ付きカード */
-    .product-card.featured {
-      border-color: var(--accent-dim);
-    }
-
-    .product-card .card-header {
+      padding: 22px 18px;
       display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 20px 20px 0;
-    }
-
-    /* =====================
-       商品画像エリア
-       （実際の画像が入るまでのプレースホルダー）
-    ===================== */
-    .product-img-wrap {
-      flex-shrink: 0;
-      width: 80px;
-      height: 80px;
-      background: var(--bg-card2);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      overflow: hidden;
-    }
-
-    .product-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-sm);
-    }
-
-    .card-meta {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .card-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-
-    .badge-rec {
-      background: var(--accent);
-      color: #000;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 2px 8px;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
-
-    .badge-cat {
-      background: var(--bg-card2);
-      border: 1px solid var(--border);
-      color: var(--text-sub);
-      font-size: 10px;
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-
-    .card-name {
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 4px;
-    }
-
-    .card-copy {
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .card-body {
-      padding: 16px 20px;
-    }
-
-    .card-desc {
-      font-size: 13px;
-      color: var(--text-sub);
-      line-height: 1.7;
-      margin-bottom: 14px;
-    }
-
-    .card-fit {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .fit-block {
-      background: var(--bg-card2);
-      border-radius: var(--radius-sm);
-      padding: 10px 12px;
-    }
-
-    .fit-block .fit-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      margin-bottom: 4px;
-    }
-
-    .fit-block.good .fit-label { color: #5dbb7c; }
-    .fit-block.bad  .fit-label { color: #c07070; }
-
-    .fit-block .fit-text {
-      font-size: 12px;
-      color: var(--text-sub);
-      line-height: 1.5;
-    }
-
-    .card-note {
-      font-size: 12px;
-      color: var(--text-sub);
-      background: var(--bg-card2);
-      border-left: 3px solid var(--accent-dim);
-      padding: 8px 12px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin-bottom: 16px;
-      line-height: 1.6;
-    }
-
-    .card-price {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 12px;
-    }
-
-    .card-price strong {
-      font-size: 18px;
-      color: var(--text);
-      font-weight: 800;
-    }
-
-    .card-price .paypay {
-      font-size: 11px;
-      color: #e06b6b;
-      font-weight: 700;
-      margin-left: 6px;
-    }
-
-    /* CTAボタン */
-    .btn-yahoo {
-      display: block;
-      background: var(--btn);
-      color: #000;
-      font-size: 14px;
-      font-weight: 800;
-      text-align: center;
-      padding: 14px;
-      border-radius: var(--radius-sm);
-      letter-spacing: 0.04em;
-      transition: background 0.2s, transform 0.1s;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, transform 0.15s;
       cursor: pointer;
     }
-
-    .btn-yahoo:active {
-      transform: scale(0.98);
+    .cat-card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-2px);
     }
-
-    @media (hover: hover) {
-      .btn-yahoo:hover {
-        background: var(--btn-hover);
-      }
-    }
-
-    /* =====================
-       用途別おすすめ
-    ===================== */
-    .usecase-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .usecase-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 16px 18px;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .usecase-icon {
-      font-size: 22px;
-      flex-shrink: 0;
-      line-height: 1;
-      padding-top: 2px;
-    }
-
-    .usecase-body {}
-
-    .usecase-title {
-      font-size: 13px;
+    .cat-card .cat-icon { font-size: 28px; line-height: 1; }
+    .cat-card .cat-name {
+      font-size: 14px;
       font-weight: 700;
-      margin-bottom: 2px;
+      line-height: 1.4;
     }
-
-    .usecase-product {
-      font-size: 13px;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-
-    .usecase-reason {
-      font-size: 12px;
-      color: var(--text-sub);
-    }
-
-    /* =====================
-       迷った人への結論
-    ===================== */
-    .conclusion {
-      background: var(--bg-card);
-      border: 1px solid var(--accent-dim);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      text-align: center;
-    }
-
-    .conclusion .label {
+    .cat-card .cat-desc {
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .conclusion h3 {
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 1.5;
-      margin-bottom: 12px;
-    }
-
-    .conclusion p {
-      font-size: 13px;
       color: var(--text-sub);
-      line-height: 1.8;
-      margin-bottom: 20px;
+      line-height: 1.5;
     }
+    .cat-card .cat-count {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    /* 準備中カード */
+    .cat-card.coming {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+    .cat-card.coming .cat-count { color: var(--text-sub); }
 
-    /* =====================
-       注意書き・アフィリエイト表記
-    ===================== */
+    /* 注意書き */
     .disclaimer {
-      padding: 32px 0;
+      padding: 28px 0;
       border-top: 1px solid var(--border);
     }
-
     .disclaimer p {
       font-size: 11px;
       color: #666;
       line-height: 1.8;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-    .disclaimer a {
-      color: #777;
-      text-decoration: underline;
-    }
-
-    /* =====================
-       フッター
-    ===================== */
+    /* フッター */
     .site-footer {
       background: #0a0a0a;
       border-top: 1px solid var(--border);
-      padding: 20px;
+      padding: 18px 20px;
       text-align: center;
     }
+    .site-footer p { font-size: 11px; color: #555; }
 
-    .site-footer p {
-      font-size: 11px;
-      color: #555;
-    }
-
-    /* =====================
-       ディバイダー
-    ===================== */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0;
-    }
-
-    /* =====================
-       レスポンシブ
-    ===================== */
-    @media (max-width: 480px) {
-      .policy-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card-fit {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 22px;
-      }
+    @media (max-width: 400px) {
+      .cat-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ==================
-     ヘッダー
-================== -->
 <header class="site-header">
   <div class="inner">
-    <span class="logo">厳選ガジェットまとめ</span>
+    <span class="logo">厳選まとめ</span>
     <span class="tagline">失敗しにくいものだけ紹介</span>
   </div>
 </header>
 
 <main>
 
-  <!-- ==================
-       ファーストビュー
-  ================== -->
   <section class="hero">
     <div class="container">
       <div class="badge">実際に使って良かったものだけ</div>
-      <h1>
-        迷わず選べる<br>
-        <span>ガジェット厳選まとめ</span>
-      </h1>
-      <p class="lead">
+      <h1>迷わず選べる<br><span>厳選まとめ</span></h1>
+      <p>
         数を揃えるより、失敗しにくいものだけ。<br>
-        「誰向けか」「どこが良いか」を短くまとめました。
+        「誰向けか」「どこが良いか」を短くまとめています。
       </p>
-      <div class="for-who">
-        <span class="tag">ガジェット迷子な人</span>
-        <span class="tag">レビューを読む時間がない人</span>
-        <span class="tag">失敗を減らしたい人</span>
-        <span class="tag">PayPayユーザー</span>
-      </div>
     </div>
   </section>
 
-  <hr class="divider">
-
-  <!-- ==================
-       選定方針
-  ================== -->
-  <section>
+  <section class="categories">
     <div class="container">
-      <h2 class="section-title">このページの<span>選び方</span></h2>
-      <p class="section-sub">こういう基準で選んでいます</p>
-      <div class="policy-grid">
-        <div class="policy-item">
-          <div class="icon">✅</div>
-          <div class="label">実際に使った</div>
-          <div class="desc">自分で試して良かったものを優先しています</div>
-        </div>
-        <div class="policy-item">
-          <div class="icon">🎯</div>
-          <div class="label">用途が明確</div>
-          <div class="desc">「何に使うか」がハッキリしているものだけ載せています</div>
-        </div>
-        <div class="policy-item">
-          <div class="icon">📦</div>
-          <div class="label">コスパ重視</div>
-          <div class="desc">値段に見合っているかどうかを基準にしています</div>
-        </div>
-        <div class="policy-item">
-          <div class="icon">💳</div>
-          <div class="label">PayPay対応</div>
-          <div class="desc">Yahoo!ショッピングで買えるのでPayPay還元が使えます</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2 class="section-title">カテゴリから<span>選ぶ</span></h2>
+      <p class="section-sub">気になるカテゴリをタップしてください</p>
 
-  <hr class="divider">
+      <div class="cat-grid">
 
-  <!-- ==================
-       商品一覧
-  ================== -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">厳選<span>商品一覧</span></h2>
-      <p class="section-sub">全部で7点。絞り込んでいます。</p>
-
-      <div class="products">
-
-        <!-- ========== 商品①（おすすめ筆頭） ========== -->
-        <!-- ▼▼▼ 商品①を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card featured">
-          <div class="card-header">
-            <div class="product-img-wrap">🔋</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-rec">イチ推し</span>
-                <span class="badge-cat">モバイルバッテリー</span>
-              </div>
-              <div class="card-name">Anker MagGo Power Bank 10000mAh 35W</div>
-              <div class="card-copy">ケーブル内蔵・Apple Watch充電・MagSafe対応の全部入り</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              ケーブルを別に持ち歩く必要がなく、Apple WatchもiPhoneも一台で充電できる。10000mAhで容量も十分。LEDディスプレイで残量が数字で確認できるのも地味に便利。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">iPhone＋Apple Watch使い・ケーブルを忘れがち・1個で完結させたい</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">Android中心・MagSafe不要・とにかく安く抑えたい</div>
-              </div>
-            </div>
-            <div class="card-note">
-              MagSafe対応なのでiPhone背面に貼り付けながら充電できる。USB-Cケーブルが本体内蔵なので手ぶらで出かけても安心。
-            </div>
-            <div class="card-price">目安 <strong>¥8,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/3PUltwW"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品① ここまで ▲▲▲ -->
-
-        <!-- ========== 商品② ========== -->
-        <!-- ▼▼▼ 商品②を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">🔌</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">充電器</span>
-              </div>
-              <div class="card-name">Anker Charger 100W 3ポート</div>
-              <div class="card-copy">PC・スマホ・タブレット、充電器これ1個で終わる</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              3ポートで最大100W出力。MacBookを充電しながらiPhoneとiPadを同時に刺せる。充電器がこれ1個に集約できると、デスクの電源タップが一気にスッキリする。USB-Cケーブル同梱・折りたたみプラグで持ち運びも楽。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">デバイスが多い・MacBook使い・充電器の数を減らしたい</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">スマホ1台だけ充電・USB-Aしか使わない</div>
-              </div>
-            </div>
-            <div class="card-price">目安 <strong>¥5,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/4smQlnn"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品② ここまで ▲▲▲ -->
-
-        <!-- ========== 商品③ ========== -->
-        <!-- ▼▼▼ 商品③を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">💻</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">デスク環境</span>
-              </div>
-              <div class="card-name">ノートPCスタンド（スマホスタンド付き）</div>
-              <div class="card-copy">首・肩が痛い人、だいたいここが原因</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              PCを目線の高さに上げるだけで姿勢が変わる。テレワーク中に首や肩が痛くなる人は、画面が低すぎることが多い。アルミ製で安定感があり、高さ・角度が無段階で調整できる。スマホスタンド付きで横に立てられるのも地味に便利。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">長時間PC作業・首肩がこる・テレワーク環境を整えたい</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">外出先メインで使う・デスクが狭い</div>
-              </div>
-            </div>
-            <div class="card-price">目安 <strong>¥3,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/4vkp9IL"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品③ ここまで ▲▲▲ -->
-
-        <!-- ========== 商品④ ========== -->
-        <!-- ▼▼▼ 商品④を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">🖥️</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">USBハブ / ドック</span>
-              </div>
-              <div class="card-name">UGREEN Revodok Pro 7-in-1 ドッキングステーション</div>
-              <div class="card-copy">MacBookのポート1口を、全部使えるデスクに変える</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              HDMI×2・USB-A×2・USB-C 10Gbps・100W PD充電に対応。外部モニター2台同時接続もできる。MacBook Air/Proのポート不足を一発で解決できる。4K@60Hz出力対応なので映像もきれい。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">MacBook/iPad Pro使い・外部モニターに繋ぎたい・4K出力が必要</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">ポートが足りているWindowsユーザー・デスクトップPC使い</div>
-              </div>
-            </div>
-            <div class="card-note">
-              HDMI×2なので外部モニター2台を同時接続できる。デュアルモニター環境を作りたい人にも向いている。
-            </div>
-            <div class="card-price">目安 <strong>¥8,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/3Qn8rYU"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品④ ここまで ▲▲▲ -->
-
-        <!-- ========== 商品⑤ ========== -->
-        <!-- ▼▼▼ 商品⑤を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">💡</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">デスクライト</span>
-              </div>
-              <div class="card-name">BenQ ScreenBar Halo</div>
-              <div class="card-copy">乗せるだけで、デスクの雰囲気が別格になる</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              モニター上部に乗せるだけで設置完了。前面照明と背面の間接照明が同時に点くので、目への負担が減りつつデスクの見た目が一気に変わる。自動調光・無線リモコン付きで操作も楽。USB給電なので電源管理も簡単。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">夜の作業が多い・目が疲れる・デスクの見た目にこだわりたい</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">ライトに1万円以上かけたくない・モニターを使っていない</div>
-              </div>
-            </div>
-            <div class="card-price">目安 <strong>¥20,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/4c6Ma8X"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品⑤ ここまで ▲▲▲ -->
-
-        <!-- ========== 商品⑥ ========== -->
-        <!-- ▼▼▼ 商品⑥を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">🧲</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">ケーブル管理</span>
-              </div>
-              <div class="card-name">Anker Magnetic Cable Holder</div>
-              <div class="card-copy">「ケーブルどこ行った？」を完全になくす</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              マグネットでケーブルをデスクに固定しておける。Lightning・USB-C・Micro USBに対応。使わないときも垂れ下がらず、必要なときはサッと引き抜けるだけ。地味だけど毎日使うものが変わる。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">ケーブルを毎日抜き差しする・デスクがごちゃつきがち・ケーブルをすぐ使いたい</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">ケーブルを常時刺しっぱなし・本数が1〜2本しかない</div>
-              </div>
-            </div>
-            <div class="card-price">目安 <strong>¥2,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/4cbVOHG"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品⑥ ここまで ▲▲▲ -->
-
-        <!-- ========== 商品⑦ ========== -->
-        <!-- ▼▼▼ 商品⑦を差し替える場合はここを編集 ▼▼▼ -->
-        <div class="product-card">
-          <div class="card-header">
-            <div class="product-img-wrap">🎧</div>
-            <div class="card-meta">
-              <div class="card-badges">
-                <span class="badge-cat">ワイヤレスイヤホン</span>
-              </div>
-              <div class="card-name">Anker Soundcore Liberty 4 NC</div>
-              <div class="card-copy">ノイキャン・ハイレゾ・50時間、1万円以下でここまで揃う</div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-desc">
-              ウルトラノイズキャンセリング3.0搭載で、カフェや移動中の騒音をしっかりカット。最大50時間再生・マルチポイント接続・IPX4防水・ワイヤレス充電対応と、必要な機能がほぼ全部揃っている。3万円台のイヤホンと比べても遜色ない完成度。
-            </p>
-            <div class="card-fit">
-              <div class="fit-block good">
-                <div class="fit-label">👍 向いている人</div>
-                <div class="fit-text">ノイキャン重視・長時間使用・コスパで妥協したくない</div>
-              </div>
-              <div class="fit-block bad">
-                <div class="fit-label">👎 向いていない人</div>
-                <div class="fit-text">最高音質にこだわるオーディオファン・ハイエンド一択の人</div>
-              </div>
-            </div>
-            <div class="card-note">
-              スマホとPC両方に同時接続できるマルチポイント接続対応。ワイヤレス充電にも対応している。
-            </div>
-            <div class="card-price">目安 <strong>¥8,000〜</strong></div>
-            <a class="btn-yahoo"
-               href="https://amzn.to/4e4meNW"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amazonで見る →
-            </a>
-          </div>
-        </div>
-        <!-- ▲▲▲ 商品⑦ ここまで ▲▲▲ -->
-
-      </div><!-- /.products -->
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ==================
-       用途別おすすめ
-  ================== -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">用途別<span>おすすめ</span></h2>
-      <p class="section-sub">「自分がどれか」で選ぶとズレにくい</p>
-
-      <div class="usecase-list">
-
-        <div class="usecase-item">
-          <div class="usecase-icon">📱</div>
-          <div class="usecase-body">
-            <div class="usecase-title">iPhone＋Apple Watch使いで外出が多いなら</div>
-            <div class="usecase-product">→ Anker MagGo Power Bank 10000mAh</div>
-            <div class="usecase-reason">ケーブル内蔵でApple Watchも充電できる一台完結</div>
-          </div>
-        </div>
-
-        <div class="usecase-item">
-          <div class="usecase-icon">💻</div>
-          <div class="usecase-body">
-            <div class="usecase-title">MacBook使いでポートが足りないなら</div>
-            <div class="usecase-product">→ UGREEN Revodok Pro ＋ Anker 100W充電器</div>
-            <div class="usecase-reason">ポート不足・充電不足を両方一気に解決できる</div>
-          </div>
-        </div>
-
-        <div class="usecase-item">
-          <div class="usecase-icon">🖥️</div>
-          <div class="usecase-body">
-            <div class="usecase-title">テレワーク環境を本気で整えたいなら</div>
-            <div class="usecase-product">→ PCスタンド ＋ ScreenBar Halo ＋ ケーブルホルダー</div>
-            <div class="usecase-reason">姿勢・目の疲れ・デスクの見た目が全部変わる</div>
-          </div>
-        </div>
-
-        <div class="usecase-item">
-          <div class="usecase-icon">🎧</div>
-          <div class="usecase-body">
-            <div class="usecase-title">コスパ重視でノイキャンイヤホンが欲しいなら</div>
-            <div class="usecase-product">→ Anker Soundcore Liberty 4 NC</div>
-            <div class="usecase-reason">1万円以下でノイキャン・ハイレゾ・50時間が全部揃う</div>
-          </div>
-        </div>
-
-        <div class="usecase-item">
-          <div class="usecase-icon">🧹</div>
-          <div class="usecase-body">
-            <div class="usecase-title">まずデスクのごちゃつきを解消したいなら</div>
-            <div class="usecase-product">→ Anker ケーブルホルダー（¥2,000〜）</div>
-            <div class="usecase-reason">一番コストが低く、即効性がある</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ==================
-       迷った人への結論
-  ================== -->
-  <section>
-    <div class="container">
-      <div class="conclusion">
-        <div class="label">▶ 迷ったらこれ</div>
-        <h3>iPhone＋Apple Watch使いなら<br>Anker MagGo Power Bankで間違いない</h3>
-        <p>
-          ケーブル内蔵でApple Watchも充電できる、今一番「全部入り」なモバイルバッテリー。<br>
-          充電ケーブルを別に持ち歩く手間がなくなるだけで、毎日の出かけ方が変わる。<br>
-          「何を買えばいいか分からない」なら、まずこれ。
-        </p>
-        <!-- ▼ アフィリエイトリンク -->
-        <a class="btn-yahoo"
-           href="https://amzn.to/3PUltwW"
-           target="_blank"
-           rel="noopener noreferrer">
-          Anker MagGo Power Bank をAmazonで見る →
+        <!-- ========================================
+             カテゴリ①：ガジェット（公開中）
+             ▼ hrefは公開済みページのURLに変更
+        ======================================== -->
+        <a class="cat-card" href="./gadget/">
+          <div class="cat-icon">🔋</div>
+          <div class="cat-name">ガジェット・充電グッズ</div>
+          <div class="cat-desc">モバイルバッテリー・充電器・イヤホンなど</div>
+          <div class="cat-count">7点掲載中</div>
         </a>
+
+        <!-- ========================================
+             カテゴリ②〜：準備中
+             公開するときは coming クラスを外して
+             href を実URLに変える
+        ======================================== -->
+        <a class="cat-card coming" href="#">
+          <div class="cat-icon">🖥️</div>
+          <div class="cat-name">デスク環境</div>
+          <div class="cat-desc">テレワーク・在宅作業を整えるグッズ</div>
+          <div class="cat-count">準備中</div>
+        </a>
+
+        <a class="cat-card coming" href="#">
+          <div class="cat-icon">🍳</div>
+          <div class="cat-name">キッチン・調理グッズ</div>
+          <div class="cat-desc">毎日使うもの・時短になるもの</div>
+          <div class="cat-count">準備中</div>
+        </a>
+
+        <a class="cat-card coming" href="#">
+          <div class="cat-icon">🎒</div>
+          <div class="cat-name">バッグ・収納グッズ</div>
+          <div class="cat-desc">持ち運び・整理に使えるもの</div>
+          <div class="cat-count">準備中</div>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <hr class="divider">
-
-  <!-- ==================
-       注意書き・アフィリエイト表記
-  ================== -->
   <section class="disclaimer">
     <div class="container">
-      <!-- ▼ 必須：アフィリエイト表記 -->
-      <p>
-        ※ 本ページはAmazon.co.jpのアソシエイト・プログラムに参加しています。
-        商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。
-        紹介する商品は独自の基準で選んでおり、掲載費などを受け取っているものはありません。
-      </p>
-      <p>
-        ※ 価格・在庫状況はAmazon.co.jpの掲載内容に依存します。
-        購入前に最新情報をご確認ください。
-      </p>
-      <p>
-        ※ 商品の特性上、個人差が生じる場合があります。
-        使用感や効果には個人差があります。
-      </p>
+      <p>※ 本サイトはAmazon.co.jpのアソシエイト・プログラムに参加しています。商品リンクから購入が発生した場合、一定の紹介料を受け取ることがあります。</p>
+      <p>※ 価格・在庫状況はAmazon.co.jpの掲載内容に依存します。購入前に最新情報をご確認ください。</p>
     </div>
   </section>
 
 </main>
 
-<!-- ==================
-     フッター
-================== -->
 <footer class="site-footer">
-  <p>© 2026 厳選ガジェットまとめ — Amazonアソシエイト参加サイト</p>
+  <p>© 2026 厳選まとめ — Amazonアソシエイト参加サイト</p>
 </footer>
-
-<!-- ==================
-     簡易スクロールアニメーション
-================== -->
-<script>
-  // 商品カードをスクロール時にフワッと表示
-  const cards = document.querySelectorAll('.product-card, .usecase-item, .policy-item');
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    cards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(16px)';
-      card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-      observer.observe(card);
-    });
-  }
-</script>
 
 </body>
 </html>
