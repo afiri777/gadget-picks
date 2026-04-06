@@ -1,63 +1,92 @@
-# アフィリエイト管理ファイル
+# アフィリエイトサイト全体管理ファイル
 
 最終更新：2026-04-06
+現在のASP：**Amazon専用**（Yahoo登録後に切り替え予定）
 
 ---
 
-## サイト構成
+## 公開URL一覧
 
 | ページ | URL | 状態 |
 |--------|-----|------|
-| トップ（カテゴリ一覧） | `/` | ✅ 公開中 |
-| ガジェット・充電グッズ | `/gadget/` | ✅ 公開中 |
-| デスク環境 | `/desk/` | 🔲 未着手 |
-| キッチン・調理グッズ | `/kitchen/` | 🔲 未着手 |
-| バッグ・収納グッズ | `/bag/` | 🔲 未着手 |
+| トップ（カテゴリ一覧） | https://afiri777.github.io/gadget-picks/ | ✅ 公開中 |
+| ガジェット・充電グッズ | https://afiri777.github.io/gadget-picks/gadget/ | ✅ 公開中 |
+| デスク環境 | https://afiri777.github.io/gadget-picks/desk/ | 🔲 未着手 |
+| キッチン・調理グッズ | https://afiri777.github.io/gadget-picks/kitchen/ | 🔲 未着手 |
+| バッグ・収納グッズ | https://afiri777.github.io/gadget-picks/bag/ | 🔲 未着手 |
 
 ---
 
-## 商品管理 ／ ガジェット・充電グッズ
+## ファイル構成
 
-| # | 商品名 | カテゴリ | 現在のプラットフォーム | リンク | 価格帯 | 切り替え状況 |
-|---|--------|----------|----------------------|--------|--------|------------|
-| 1 | Anker MagGo Power Bank 10000mAh 35W | モバイルバッテリー | Amazon | https://amzn.to/3PUltwW | ¥8,000〜 | ⏳ Yahoo登録後に切り替え |
-| 2 | Anker Charger 100W 3ポート | 充電器 | Amazon | https://amzn.to/4smQlnn | ¥5,000〜 | ⏳ Yahoo登録後に切り替え |
-| 3 | ノートPCスタンド（スマホスタンド付き） | デスク環境 | Amazon | https://amzn.to/4vkp9IL | ¥3,000〜 | ⏳ Yahoo登録後に切り替え |
-| 4 | UGREEN Revodok Pro 7-in-1 ドッキングステーション | USBハブ | Amazon | https://amzn.to/3Qn8rYU | ¥8,000〜 | ⏳ Yahoo登録後に切り替え |
-| 5 | BenQ ScreenBar Halo | デスクライト | Amazon | https://amzn.to/4c6Ma8X | ¥20,000〜 | ⏳ Yahoo登録後に切り替え |
-| 6 | Anker Magnetic Cable Holder | ケーブル管理 | Amazon | https://amzn.to/4cbVOHG | ¥2,000〜 | ⏳ Yahoo登録後に切り替え |
-| 7 | Anker Soundcore Liberty 4 NC | イヤホン | Amazon | https://amzn.to/4e4meNW | ¥8,000〜 | ⏳ Yahoo登録後に切り替え |
+```
+gadget-picks/
+├── index.html              ← トップページ（カテゴリ一覧）
+├── gadget/
+│   └── index.html          ← ガジェットページ（products.jsから自動レンダリング）
+├── data/
+│   └── products.js         ← 全商品データの管理ファイル（ここだけ編集すれば反映）
+└── MANAGE.md               ← このファイル
+```
 
----
-
-## Yahooリンク切り替えチェックリスト
-
-Yahooアフィリエイト登録完了後、以下の順番で切り替える。
-
-- [ ] ガジェットページ（/gadget/index.html）の全商品リンクをYahooに変更
-- [ ] ボタン文言を「Amazonで見る」→「Yahoo!ショッピングで見る」に変更
-- [ ] 免責表記をYahoo版に変更（`Amazonアソシエイト` → `Yahoo!ショッピングアフィリエイト`）
-- [ ] トップページ（index.html）の免責表記も変更
-- [ ] MANAGE.mdの切り替え状況を「✅ 切り替え完了」に更新
-- [ ] GitHubにpushして反映確認
+### 更新の基本ルール
+- **商品の追加・変更・リンク差し替え** → `data/products.js` だけ編集
+- **ページのデザイン・構成変更** → 各 `index.html` を編集
+- **カテゴリ追加** → 新フォルダ作成 ＋ `index.html` のカテゴリカードを更新
+- **編集後は必ずGitHubにpushして反映確認**
 
 ---
 
-## 新カテゴリページ追加手順
+## 現在のASP運用方針
 
-1. `/gadget/index.html` をコピーして新フォルダに置く
-   例：`/desk/index.html`
-2. 商品カード（`product-card`ブロック）を差し替える
-3. トップページ（`/index.html`）のカテゴリカードに追加
-   - `coming` クラスを外す
-   - `href` を実URLに変更
-   - `cat-count` の点数を更新
-4. MANAGE.mdのサイト構成テーブルを更新
-5. GitHubにpush
+| 項目 | 現状 |
+|------|------|
+| 使用ASP | Amazon アソシエイトのみ |
+| ボタン文言 | 「Amazonで見る →」 |
+| 免責表記 | Amazon版 |
+| Yahoo表記 | 非表示（内部管理のみ） |
+
+### Yahoo導入後の切り替え手順
+1. `data/products.js` の対象商品の `asp` を `"amazon"` → `"yahoo"` に変更
+2. 同じく `link` をYahooアフィリリンクに変更
+3. ボタン文言はコードが自動で「Yahoo!ショッピングで見る →」に切り替わる
+4. 免責表記（各index.html下部）をYahoo版に変更
+5. MANAGE.mdの状態を更新
+6. GitHubにpush
 
 ---
 
-## 商品追加候補（未掲載）
+## 掲載商品一覧（全商品）
+
+### ガジェット・充電グッズ（page: gadget）
+
+| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 | 優先度 |
+|---|--------|--------|----------|-----|------|--------|
+| 1 | anker-maggo-10000 | Anker MagGo Power Bank 10000mAh 35W | モバイルバッテリー | Amazon | ✅ 掲載中 | 1 |
+| 2 | anker-charger-100w | Anker Charger 100W 3ポート | 充電器 | Amazon | ✅ 掲載中 | 2 |
+| 3 | laptop-stand | ノートPCスタンド（スマホスタンド付き） | デスク環境 | Amazon | ✅ 掲載中 | 3 |
+| 4 | ugreen-revodok-pro | UGREEN Revodok Pro 7-in-1 | USBハブ / ドック | Amazon | ✅ 掲載中 | 4 |
+| 5 | benq-screenbar-halo | BenQ ScreenBar Halo | デスクライト | Amazon | ✅ 掲載中 | 5 |
+| 6 | anker-cable-holder | Anker Magnetic Cable Holder | ケーブル管理 | Amazon | ✅ 掲載中 | 6 |
+| 7 | anker-liberty4-nc | Anker Soundcore Liberty 4 NC | ワイヤレスイヤホン | Amazon | ✅ 掲載中 | 7 |
+
+---
+
+## Amazonアフィリリンク一覧
+
+| 商品ID | リンク |
+|--------|--------|
+| anker-maggo-10000 | https://amzn.to/3PUltwW |
+| anker-charger-100w | https://amzn.to/4smQlnn |
+| laptop-stand | https://amzn.to/4vkp9IL |
+| ugreen-revodok-pro | https://amzn.to/3Qn8rYU |
+| benq-screenbar-halo | https://amzn.to/4c6Ma8X |
+| anker-cable-holder | https://amzn.to/4cbVOHG |
+| anker-liberty4-nc | https://amzn.to/4e4meNW |
+
+---
+
+## 商品追加候補
 
 | 商品名 | カテゴリ | 追加優先度 | メモ |
 |--------|----------|------------|------|
@@ -65,13 +94,29 @@ Yahooアフィリエイト登録完了後、以下の順番で切り替える。
 
 ---
 
-## GitHubリポジトリ
+## 新カテゴリページ追加手順
 
-- URL：https://github.com/afiri777/gadget-picks
-- 公開URL：https://afiri777.github.io/gadget-picks/
-- ローカルパス：/Users/yuusha/SNS収益化/yahoo-affiliate/
+1. `/gadget/index.html` をコピーして新フォルダに置く（例：`/desk/index.html`）
+2. ページ内のカテゴリ関連テキストを書き換え（タイトル・タグ・用途別など）
+3. `data/products.js` に新商品を追加（`page: "desk"` などに設定）
+4. トップページ（`index.html`）のカテゴリカードを更新
+   - `coming` クラスを削除
+   - `href` を実URLに変更
+   - `cat-count` の点数を更新
+5. このMANAGE.mdのURL一覧・商品一覧を更新
+6. GitHubにpush
 
-## pushコマンド（毎回使う）
+---
+
+## GitHubリポジトリ情報
+
+| 項目 | 内容 |
+|------|------|
+| リポジトリ | https://github.com/afiri777/gadget-picks |
+| 公開URL | https://afiri777.github.io/gadget-picks/ |
+| ローカルパス | /Users/yuusha/SNS収益化/yahoo-affiliate/ |
+
+## 毎回使うpushコマンド
 
 ```bash
 cd /Users/yuusha/SNS収益化/yahoo-affiliate
