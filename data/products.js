@@ -1062,6 +1062,28 @@ const PRODUCTS = [
     priority:    13,
     status:      "active"
   },
+  {
+    id:          "ienow-c2-ebike",
+    name:        "イーノウ C2 電動アシスト自転車 折りたたみ 20インチ 7段変速",
+    brand:       "イーノウ",
+    category:    "電動アシスト自転車",
+    icon:        "🚲",
+    featured:    false,
+    badge:       "",
+    copy:        "折りたたみ＆最大150km走行。免許不要で使いやすい電動アシスト自転車",
+    description: "",
+    fit_good:    "通勤・通学の移動をラクにしたい人・折りたたんで収納・持ち運びしたい人",
+    fit_bad:     "自転車を使わない人・保管スペースがない人",
+    note:        "20インチ・7段変速・ダブルサスペンション・7.8Ah・250W・免許不要。",
+    price:       "",
+    asp:         "yahoo",
+    link:        "https://yahoo.jp/TbWbJVEENOUR",
+    asp_sub:     "",
+    link_sub:    "",
+    page:        "life",
+    priority:    14,
+    status:      "hold"
+  },
 
   // ==========================================================
   // 片付け・整理グッズ（page: "organize"）

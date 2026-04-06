@@ -23,13 +23,13 @@
 gadget-picks/
 ├── index.html              ← トップページ（カテゴリ一覧）
 ├── gadget/
-│   └── index.html          ← ガジェットページ（products.jsから自動レンダリング）
+│   └── index.html          ← ガジェットページ
 ├── desk/
-│   └── index.html          ← デスクページ（未作成）
+│   └── index.html          ← デスクページ
 ├── life/
-│   └── index.html          ← 生活グッズページ（未作成）
+│   └── index.html          ← 生活グッズページ
 ├── organize/
-│   └── index.html          ← 整理グッズページ（未作成）
+│   └── index.html          ← 整理グッズページ
 ├── data/
 │   └── products.js         ← 全商品データの管理ファイル（ここだけ編集すれば反映）
 └── MANAGE.md               ← このファイル
@@ -78,97 +78,85 @@ gadget-picks/
 
 ## 掲載商品一覧（全商品）
 
-### ガジェット・充電グッズ（page: gadget）
+### ガジェット・充電グッズ（page: gadget）— 22商品
 
-#### 掲載中
-
-| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 | 優先度 |
-|---|--------|--------|----------|-----|------|--------|
-| 1 | anker-maggo-10000 | Anker MagGo Power Bank 10000mAh 35W | モバイルバッテリー | Amazon | ✅ 掲載中 | 1 |
-| 2 | anker-charger-100w | Anker Charger 100W 3ポート | 充電器 | Amazon | ✅ 掲載中 | 2 |
-| 3 | laptop-stand | ノートPCスタンド（スマホスタンド付き） | デスク環境 | Amazon | ✅ 掲載中 | 3 |
-| 4 | ugreen-revodok-pro | UGREEN Revodok Pro 7-in-1 | USBハブ / ドック | Amazon | ✅ 掲載中 | 4 |
-| 5 | benq-screenbar-halo | BenQ ScreenBar Halo | デスクライト | Amazon | ✅ 掲載中 | 5 |
-| 6 | anker-cable-holder | Anker Magnetic Cable Holder | ケーブル管理 | Amazon | ✅ 掲載中 | 6 |
-| 7 | anker-liberty4-nc | Anker Soundcore Liberty 4 NC | ワイヤレスイヤホン | Amazon | ✅ 掲載中 | 7 |
-
-#### 未掲載（hold）
-
-| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 |
-|---|--------|--------|----------|-----|------|
-| 8 | anker-621-magnetic-5000 | Anker 621 Magnetic Battery (MagGo) 5000mAh | モバイルバッテリー | Amazon | 🔲 未掲載 |
-| 9 | syncwire-magsafe-ring | 両面マグネット MagSafe リング | スマホリング | Amazon | 🔲 未掲載 |
-| 10 | sandisk-ssd-1tb | 外付けSSD 1TB | 外付けSSD | Amazon | 🔲 未掲載 |
-| 11 | magtame-typec-cable-240w | 磁石自動収納 Type-Cケーブル 240W 1m | 充電ケーブル | Amazon | 🔲 未掲載 |
-| 12 | anker-maggo-10000-slim-yahoo | Anker MagGo Power Bank 10000mAh Slim | モバイルバッテリー | Yahoo | 🔲 未掲載 |
-| 13 | elecom-battery-9000-sodium | モバイルバッテリー ナトリウムイオン 9000mAh 45W EC-C27LBK | モバイルバッテリー | Yahoo | 🔲 未掲載 |
-| 14 | anker-soundcore-p40i | Anker Soundcore P40i | ワイヤレスイヤホン | Yahoo | 🔲 未掲載 |
-| 15 | anker-336-charger-67w | Anker 336 Charger 67W 3ポート B2674N11 | 充電器 | Yahoo | 🔲 未掲載 |
-| 16 | eufy-smarttrack-card | Eufy Security SmartTrack Card | 紛失防止トラッカー | Yahoo | 🔲 未掲載 |
-| 17 | anker-solix-c300 | Anker Solix C300 DC Portable Power Station 288Wh | ポータブル電源 | Yahoo | 🔲 未掲載 |
-| 18 | belkin-qi2-2in1 | Belkin UltraCharge Qi2 25W 2-in-1 折りたたみ式マグネット充電器 | Qi2充電器 | Yahoo | 🔲 未掲載 |
-| 19 | ugreen-nas-dxp2800 | UGREEN DXP2800 NASync NAS 2ベイ | NAS | Yahoo | 🔲 未掲載 |
-| 20 | ugreen-nas-dh2300 | UGREEN NASync DH2300 | NAS | Yahoo | 🔲 未掲載 |
-| 21 | eufy-smarttrack-link | Anker Eufy SmartTrack Link（Android用） | 紛失防止トラッカー | Yahoo | 🔲 未掲載 |
-| 22 | tplink-deco-x50 | TP-Link Deco X50（1-pack）AX3000 | メッシュWi-Fi | Yahoo | 🔲 未掲載 |
+| # | 商品ID | 商品名 | カテゴリ | ASP | 優先度 |
+|---|--------|--------|----------|-----|--------|
+| 1 | anker-maggo-10000 | Anker MagGo Power Bank 10000mAh 35W | モバイルバッテリー | Amazon | 1 |
+| 2 | anker-charger-100w | Anker Charger 100W 3ポート | 充電器 | Amazon | 2 |
+| 3 | laptop-stand | ノートPCスタンド（スマホスタンド付き） | デスク環境 | Amazon | 3 |
+| 4 | ugreen-revodok-pro | UGREEN Revodok Pro 7-in-1 | USBハブ / ドック | Amazon | 4 |
+| 5 | benq-screenbar-halo | BenQ ScreenBar Halo | デスクライト | Amazon | 5 |
+| 6 | anker-cable-holder | Anker Magnetic Cable Holder | ケーブル管理 | Amazon | 6 |
+| 7 | anker-liberty4-nc | Anker Soundcore Liberty 4 NC | ワイヤレスイヤホン | Amazon | 7 |
+| 8 | anker-621-magnetic-5000 | Anker 621 Magnetic Battery (MagGo) 5000mAh | モバイルバッテリー | Amazon | 8 |
+| 9 | syncwire-magsafe-ring | 両面マグネット MagSafe リング | スマホリング | Amazon | 9 |
+| 10 | sandisk-ssd-1tb | 外付けSSD 1TB | 外付けSSD | Amazon | 10 |
+| 11 | magtame-typec-cable-240w | 磁石自動収納 Type-Cケーブル 240W 1m | 充電ケーブル | Amazon | 11 |
+| 12 | anker-maggo-10000-slim-yahoo | Anker MagGo Power Bank 10000mAh Slim | モバイルバッテリー | Yahoo | 12 |
+| 13 | elecom-battery-9000-sodium | モバイルバッテリー ナトリウムイオン 9000mAh 45W EC-C27LBK | モバイルバッテリー | Yahoo | 13 |
+| 14 | anker-soundcore-p40i | Anker Soundcore P40i | ワイヤレスイヤホン | Yahoo | 14 |
+| 15 | anker-336-charger-67w | Anker 336 Charger 67W 3ポート B2674N11 | 充電器 | Yahoo | 15 |
+| 16 | eufy-smarttrack-card | Eufy Security SmartTrack Card | 紛失防止トラッカー | Yahoo | 16 |
+| 17 | anker-solix-c300 | Anker Solix C300 DC Portable Power Station 288Wh | ポータブル電源 | Yahoo | 17 |
+| 18 | belkin-qi2-2in1 | Belkin UltraCharge Qi2 25W 2-in-1 折りたたみ式マグネット充電器 | Qi2充電器 | Yahoo | 18 |
+| 19 | ugreen-nas-dxp2800 | UGREEN DXP2800 NASync NAS 2ベイ | NAS | Yahoo | 19 |
+| 20 | ugreen-nas-dh2300 | UGREEN NASync DH2300 | NAS | Yahoo | 20 |
+| 21 | eufy-smarttrack-link | Anker Eufy SmartTrack Link（Android用） | 紛失防止トラッカー | Yahoo | 21 |
+| 22 | tplink-deco-x50 | TP-Link Deco X50（1-pack）AX3000 | メッシュWi-Fi | Yahoo | 22 |
 
 ---
 
-### デスク・作業効率グッズ（page: desk）
+### デスク・作業効率グッズ（page: desk）— 11商品
 
-#### 未掲載（hold）
-
-| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 |
-|---|--------|--------|----------|-----|------|
-| 1 | elecom-qi2-3in1-ec-ms09bk | Qi2 充電器 ワイヤレス 15W 3in1 スタンド型 EC-MS09BK | Qi2充電スタンド | Amazon | 🔲 未掲載 |
-| 2 | yamazaki-desk-bar | 山崎実業 デスクバー tower | デスク収納 | Amazon | 🔲 未掲載 |
-| 3 | elecom-wrist-rest | エレコム COMFY ショート リストレスト MOH-013BK | リストレスト | Amazon | 🔲 未掲載 |
-| 4 | ticktimer-cube | TickTimer キューブタイマー | タイマー | Amazon | 🔲 未掲載 |
-| 5 | sanwa-footrest | サンワサプライ フットレスト | フットレスト | Amazon | 🔲 未掲載 |
-| 6 | logicool-mx-ergo | ロジクール MX ERGO MXTB1s トラックボールマウス | マウス | Amazon | 🔲 未掲載 |
-| 7 | hachiban-desk-under-storage | 八番屋 後付け机下収納 BIG-Type | デスク収納 | Amazon | 🔲 未掲載 |
-| 8 | ugreen-vertical-pc-stand | UGREEN 縦型ノートパソコンスタンド | PCスタンド | Amazon | 🔲 未掲載 |
-| 9 | eayhm-monitor-stand-usb | EAYHM USBドッキング付きモニター台 | モニター台 | Amazon | 🔲 未掲載 |
-| 10 | amesoba-desk-mat-wool | amesoba さらさら質感 ウール デスクマット | デスクマット | Amazon | 🔲 未掲載 |
-| 11 | anker-powerconf-c200 | Anker PowerConf C200 2K コンパクトウェブカメラ | ウェブカメラ | Amazon | 🔲 未掲載 |
+| # | 商品ID | 商品名 | カテゴリ | ASP | 優先度 |
+|---|--------|--------|----------|-----|--------|
+| 1 | logicool-mx-ergo | ロジクール MX ERGO MXTB1s トラックボールマウス | マウス | Amazon | 1 |
+| 2 | eayhm-monitor-stand-usb | EAYHM USBドッキング付きモニター台 | モニター台 | Amazon | 2 |
+| 3 | ugreen-vertical-pc-stand | UGREEN 縦型ノートパソコンスタンド | PCスタンド | Amazon | 3 |
+| 4 | amesoba-desk-mat-wool | amesoba さらさら質感 ウール デスクマット | デスクマット | Amazon | 4 |
+| 5 | elecom-wrist-rest | エレコム COMFY ショート リストレスト MOH-013BK | リストレスト | Amazon | 5 |
+| 6 | yamazaki-desk-bar | 山崎実業 デスクバー tower | デスク収納 | Amazon | 6 |
+| 7 | hachiban-desk-under-storage | 八番屋 後付け机下収納 BIG-Type | デスク収納 | Amazon | 7 |
+| 8 | ticktimer-cube | TickTimer キューブタイマー | タイマー | Amazon | 8 |
+| 9 | sanwa-footrest | サンワサプライ フットレスト | フットレスト | Amazon | 9 |
+| 10 | anker-powerconf-c200 | Anker PowerConf C200 2K コンパクトウェブカメラ | ウェブカメラ | Amazon | 10 |
+| 11 | elecom-qi2-3in1-ec-ms09bk | Qi2 充電器 ワイヤレス 15W 3in1 スタンド型 EC-MS09BK | Qi2充電スタンド | Amazon | 11 |
 
 ---
 
-### 生活ラクするグッズ（page: life）
+### 生活ラクするグッズ（page: life）— 14商品（hold含む）
 
-#### 未掲載（hold）
-
-| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 |
-|---|--------|--------|----------|-----|------|
-| 1 | yamazaki-dispenser-tower | 山崎実業 片手で出せるディスペンサー tower 5214 | ディスペンサー | Amazon | 🔲 未掲載 |
-| 2 | umimile-auto-soap-dispenser | Umimile 自動泡ハンドソープ ディスペンサー | ディスペンサー | Amazon | 🔲 未掲載 |
-| 3 | heat-sealer-typec | 家庭用 ヒートシーラー Type-C充電式 | キッチングッズ | Amazon | 🔲 未掲載 |
-| 4 | yamazaki-kitchen-slide-table | 山崎実業 ツーウェイ キッチン家電下引き出し＆スライドテーブル tower | キッチン収納 | Amazon | 🔲 未掲載 |
-| 5 | switchbot-switch | SwitchBot スイッチ | スマートホーム | Amazon | 🔲 未掲載 |
-| 6 | switchbot-lock-ultra-set | SwitchBot スマートロック Ultra 顔認証パッドPro セット | スマートロック | Yahoo | 🔲 未掲載 |
-| 7 | switchbot-smart-circulator | SwitchBot スマートサーキュレーター | スマートホーム | Yahoo | 🔲 未掲載 |
-| 8 | aladdin-x2-light | Aladdin X2 Light | シーリングプロジェクター | Yahoo | 🔲 未掲載 |
-| 9 | switchbot-fingerprint-pad | SwitchBot 指紋認証パッド | スマートロック | Yahoo | 🔲 未掲載 |
-| 10 | switchbot-lock-lite-set | SwitchBot スマートロック Lite 指紋認証パッド セット | スマートロック | Yahoo | 🔲 未掲載 |
-| 11 | eufy-robot-vacuum-c10 | Anker Eufy Robot Vacuum Auto-Empty C10 | ロボット掃除機 | Yahoo | 🔲 未掲載 |
-| 12 | ecovacs-deebot-t80-omni | ECOVACS DEEBOT T80 OMNI | ロボット掃除機 | Yahoo | 🔲 未掲載 |
-| 13 | switchbot-hub-mini-matter | SwitchBot スマートリモコン Hub Mini（Matter対応） | スマートリモコン | Yahoo | 🔲 未掲載 |
+| # | 商品ID | 商品名 | カテゴリ | ASP | 優先度 |
+|---|--------|--------|----------|-----|--------|
+| 1 | eufy-robot-vacuum-c10 | Anker Eufy Robot Vacuum Auto-Empty C10 | ロボット掃除機 | Yahoo | 1 |
+| 2 | ecovacs-deebot-t80-omni | ECOVACS DEEBOT T80 OMNI | ロボット掃除機 | Yahoo | 2 |
+| 3 | switchbot-lock-ultra-set | SwitchBot スマートロック Ultra 顔認証パッドPro セット | スマートロック | Yahoo | 3 |
+| 4 | switchbot-lock-lite-set | SwitchBot スマートロック Lite 指紋認証パッド セット | スマートロック | Yahoo | 4 |
+| 5 | switchbot-fingerprint-pad | SwitchBot 指紋認証パッド | スマートロック | Yahoo | 5 |
+| 6 | switchbot-hub-mini-matter | SwitchBot スマートリモコン Hub Mini（Matter対応） | スマートリモコン | Yahoo | 6 |
+| 7 | switchbot-switch | SwitchBot スイッチ | スマートホーム | Amazon | 7 |
+| 8 | switchbot-smart-circulator | SwitchBot スマートサーキュレーター | スマートホーム | Yahoo | 8 |
+| 9 | aladdin-x2-light | Aladdin X2 Light | シーリングプロジェクター | Yahoo | 9 |
+| 10 | yamazaki-dispenser-tower | 山崎実業 片手で出せるディスペンサー tower 5214 | ディスペンサー | Amazon | 10 |
+| 11 | umimile-auto-soap-dispenser | Umimile 自動泡ハンドソープ ディスペンサー | ディスペンサー | Amazon | 11 |
+| 12 | yamazaki-kitchen-slide-table | 山崎実業 ツーウェイ キッチン家電下引き出し＆スライドテーブル tower | キッチン収納 | Amazon | 12 |
+| 13 | heat-sealer-typec | 家庭用 ヒートシーラー Type-C充電式 | キッチングッズ | Amazon | 13 |
+| 14 | ienow-c2-ebike | イーノウ C2 電動アシスト自転車 折りたたみ 20インチ 7段変速 | 電動アシスト自転車 | Yahoo | 14 |（hold）
 
 ---
 
-### 片付け・整理グッズ（page: organize）
+### 片付け・整理グッズ（page: organize）— 7商品
 
-#### 未掲載（hold）
-
-| # | 商品ID | 商品名 | カテゴリ | ASP | 状態 |
-|---|--------|--------|----------|-----|------|
-| 1 | yamazaki-bag-stocker-tower | 山崎実業 ツーウェイ レジ袋ストッカー tower 5437 | 収納グッズ | Amazon | 🔲 未掲載 |
-| 2 | yamazaki-tissue-hook-tower | 山崎実業 フィルムフック ティッシュケース tower 5587 | 収納グッズ | Amazon | 🔲 未掲載 |
-| 3 | yamazaki-wagon-box-s | 山崎実業 ワゴン用追加ボックス S tower | 収納グッズ | Amazon | 🔲 未掲載 |
-| 4 | yamazaki-magnet-sponge-holder | 山崎実業 マグネット スポンジ＆ボトルホルダー tower | 収納グッズ | Amazon | 🔲 未掲載 |
-| 5 | yamazaki-magnet-bottle-tray-plate | 山崎実業 マグネット ボトルホルダー＆トレー Plate | 収納グッズ | Amazon | 🔲 未掲載 |
-| 6 | drawer-divider-8set | 引き出し仕切り収納ケース 8個セット | 収納グッズ | Amazon | 🔲 未掲載 |
-| 7 | vilau-bag-in-bag | VILAU バッグインバッグ 底板付き トートバッグ インナーバッグ | 収納グッズ | Amazon | 🔲 未掲載 |
+| # | 商品ID | 商品名 | カテゴリ | ASP | 優先度 |
+|---|--------|--------|----------|-----|--------|
+| 1 | yamazaki-magnet-sponge-holder | 山崎実業 マグネット スポンジ＆ボトルホルダー tower | 収納グッズ | Amazon | 1 |
+| 2 | yamazaki-magnet-bottle-tray-plate | 山崎実業 マグネット ボトルホルダー＆トレー Plate | 収納グッズ | Amazon | 2 |
+| 3 | yamazaki-tissue-hook-tower | 山崎実業 フィルムフック ティッシュケース tower 5587 | 収納グッズ | Amazon | 3 |
+| 4 | yamazaki-bag-stocker-tower | 山崎実業 ツーウェイ レジ袋ストッカー tower 5437 | 収納グッズ | Amazon | 4 |
+| 5 | drawer-divider-8set | 引き出し仕切り収納ケース 8個セット | 収納グッズ | Amazon | 5 |
+| 6 | yamazaki-wagon-box-s | 山崎実業 ワゴン用追加ボックス S tower | 収納グッズ | Amazon | 6 |
+| 7 | vilau-bag-in-bag | VILAU バッグインバッグ 底板付き トートバッグ インナーバッグ | 収納グッズ | Amazon | 7 |
 
 ---
 
@@ -236,6 +224,7 @@ gadget-picks/
 | eufy-robot-vacuum-c10 | https://yahoo.jp/h6EvjU6 |
 | ecovacs-deebot-t80-omni | https://yahoo.jp/ZjvdpZ |
 | switchbot-hub-mini-matter | https://yahoo.jp/F8cdpTw |
+| ienow-c2-ebike | https://yahoo.jp/TbWbJVEENOUR |
 
 ---
 
