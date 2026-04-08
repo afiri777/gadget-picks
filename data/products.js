@@ -261,28 +261,6 @@ const PRODUCTS = [
     status:      "active"
   },
   {
-    id:          "magtame-typec-cable-240w",
-    name:        "磁石自動収納 Type-Cケーブル 240W 1m",
-    brand:       "Magtame",
-    category:    "充電ケーブル",
-    icon:        "🔌",
-    featured:    false,
-    badge:       "",
-    copy:        "磁石でまとまりやすく、持ち運びや整理がしやすい急速充電対応Type-Cケーブル",
-    description: "",
-    fit_good:    "ケーブルを絡ませたくない人・MacBookやiPadの充電用に整理しやすい物が欲しい人",
-    fit_bad:     "ケーブル収納にこだわらない人・Type-C機器をあまり使わない人",
-    note:        "240W/5A、QC4.0/PD3.1対応、ブラック1m。整理しやすさ訴求も可能。",
-    price:       "¥5,780〜",
-    asp:         "amazon",
-    link:        "https://amzn.to/47Ljam2",
-    asp_sub:     "",
-    link_sub:    "",
-    page:        "gadget",
-    priority:    11,
-    status:      "hold"
-  },
-  {
     id:          "anker-maggo-10000-slim-yahoo",
     name:        "Anker MagGo Power Bank 10000mAh Slim",
     brand:       "Anker",
@@ -301,7 +279,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    12,
+    priority:    11,
     status:      "active"
   },
   {
@@ -323,7 +301,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    13,
+    priority:    12,
     status:      "active"
   },
   {
@@ -345,7 +323,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    14,
+    priority:    13,
     status:      "active"
   },
   {
@@ -367,7 +345,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    15,
+    priority:    14,
     status:      "active"
   },
   {
@@ -389,7 +367,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    16,
+    priority:    15,
     status:      "active"
   },
   {
@@ -411,7 +389,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    17,
+    priority:    16,
     status:      "active"
   },
   {
@@ -433,7 +411,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    18,
+    priority:    17,
     status:      "active"
   },
   {
@@ -455,30 +433,8 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    19,
+    priority:    18,
     status:      "active"
-  },
-  {
-    id:          "ugreen-nas-dh2300",
-    name:        "UGREEN NASync DH2300",
-    brand:       "UGREEN",
-    category:    "NAS",
-    icon:        "🗄️",
-    featured:    false,
-    badge:       "",
-    copy:        "家庭用・作業用のデータ保管環境を整えやすいNAS",
-    description: "",
-    fit_good:    "バックアップや共有ストレージを作りたい人・NASを導入したい人",
-    fit_bad:     "外付けSSDだけで十分な人・ネットワーク設定に苦手意識がある人",
-    note:        "DXP2800と比較・統合候補。UGREEN NASync系として管理。",
-    price:       "¥26,301〜",
-    asp:         "yahoo",
-    link:        "https://yahoo.jp/wsRqj9",
-    asp_sub:     "",
-    link_sub:    "",
-    page:        "gadget",
-    priority:    20,
-    status:      "hold"
   },
   {
     id:          "eufy-smarttrack-link",
@@ -499,7 +455,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    21,
+    priority:    19,
     status:      "active"
   },
   {
@@ -521,7 +477,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    22,
+    priority:    20,
     status:      "active"
   },
   {
@@ -543,7 +499,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    23,
+    priority:    21,
     status:      "active"
   },
   {
@@ -565,7 +521,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    24,
+    priority:    22,
     status:      "active"
   },
   {
@@ -587,7 +543,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    25,
+    priority:    23,
     status:      "active"
   },
   {
@@ -609,7 +565,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    26,
+    priority:    24,
     status:      "active"
   },
   {
@@ -631,7 +587,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    27,
+    priority:    25,
     status:      "active"
   },
   {
@@ -653,7 +609,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    28,
+    priority:    26,
     status:      "active"
   },
   {
@@ -675,7 +631,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    29,
+    priority:    27,
     status:      "active"
   },
   {
@@ -697,7 +653,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    30,
+    priority:    28,
     status:      "active"
   },
   {
@@ -719,7 +675,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "gadget",
-    priority:    31,
+    priority:    29,
     status:      "active"
   },
 
@@ -838,28 +794,6 @@ const PRODUCTS = [
     status:      "active"
   },
   {
-    id:          "yamazaki-desk-bar",
-    name:        "山崎実業 デスクバー tower",
-    brand:       "山崎実業",
-    category:    "デスク収納",
-    icon:        "🗂️",
-    featured:    false,
-    badge:       "",
-    copy:        "メガネ・リモコン・文具をまとめて置ける省スペースのデスク収納バー",
-    description: "",
-    fit_good:    "机の上の小物を散らかしたくない人・見た目をすっきりさせたい人",
-    fit_bad:     "大容量収納を求める人・引き出し収納メインで足りている人",
-    note:        "tower系で統一感を出したいページと相性が良い。ホワイト。",
-    price:       "¥2,500〜",
-    asp:         "amazon",
-    link:        "https://amzn.to/3Oozxyi",
-    asp_sub:     "",
-    link_sub:    "",
-    page:        "desk",
-    priority:    6,
-    status:      "hold"
-  },
-  {
     id:          "hachiban-desk-under-storage",
     name:        "八番屋 後付け机下収納 BIG-Type",
     brand:       "八番屋",
@@ -878,7 +812,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    7,
+    priority:    6,
     status:      "active"
   },
   {
@@ -900,7 +834,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    8,
+    priority:    7,
     status:      "active"
   },
   {
@@ -922,7 +856,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    9,
+    priority:    8,
     status:      "active"
   },
   {
@@ -944,7 +878,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    10,
+    priority:    9,
     status:      "active"
   },
   {
@@ -966,7 +900,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    11,
+    priority:    10,
     status:      "active"
   },
   {
@@ -988,7 +922,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    13,
+    priority:    11,
     status:      "active"
   },
   {
@@ -1010,7 +944,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    14,
+    priority:    12,
     status:      "active"
   },
   {
@@ -1032,7 +966,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    15,
+    priority:    13,
     status:      "active"
   },
   {
@@ -1054,7 +988,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    16,
+    priority:    14,
     status:      "active"
   },
   {
@@ -1076,7 +1010,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    17,
+    priority:    15,
     status:      "active"
   },
   {
@@ -1098,7 +1032,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    18,
+    priority:    16,
     status:      "active"
   },
   {
@@ -1120,7 +1054,7 @@ const PRODUCTS = [
     asp_sub:     "",
     link_sub:    "",
     page:        "desk",
-    priority:    19,
+    priority:    17,
     status:      "active"
   },
 
