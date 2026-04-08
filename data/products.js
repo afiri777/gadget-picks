@@ -1077,12 +1077,12 @@ const PRODUCTS = [
     note:        "20インチ・7段変速・ダブルサスペンション・7.8Ah・250W・免許不要。",
     price:       "¥144,800〜",
     asp:         "yahoo",
-    link:        "https://yahoo.jp/AaEG_Z",
+    link:        "https://yahoo.jp/3-hh46",
     asp_sub:     "",
     link_sub:    "",
     page:        "life",
     priority:    14,
-    status:      "hold"
+    status:      "active"
   },
   {
     id:          "sensor-trash-can-45l",
