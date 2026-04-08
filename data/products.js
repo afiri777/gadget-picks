@@ -1077,7 +1077,7 @@ const PRODUCTS = [
     note:        "20インチ・7段変速・ダブルサスペンション・7.8Ah・250W・免許不要。",
     price:       "¥144,800〜",
     asp:         "yahoo",
-    link:        "https://yahoo.jp/TbWbJVEENOUR",
+    link:        "https://yahoo.jp/AaEG_Z",
     asp_sub:     "",
     link_sub:    "",
     page:        "life",
