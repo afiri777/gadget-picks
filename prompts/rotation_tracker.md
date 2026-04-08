@@ -1,7 +1,7 @@
 # 投稿ローテーション管理
 
-最終更新：2026-04-06
-総商品数：53商品（gadget 22 / desk 11 / life 13 / organize 7）
+最終更新：2026-04-08
+総商品数：54商品（gadget 22 / desk 11 / life 15 / organize 7）
 
 ---
 
@@ -24,7 +24,7 @@
 | 4 | yamazaki-magnet-sponge-holder | 山崎実業 マグネット スポンジ＆ボトルホルダー | 収納グッズ | organize | Amazon | - | |
 | 5 | anker-charger-100w | Anker Charger 100W 3ポート | 充電器 | gadget | Amazon | - | |
 | 6 | eayhm-monitor-stand-usb | EAYHM USBドッキング付きモニター台 | モニター台 | desk | Amazon | - | |
-| 7 | ecovacs-deebot-t80-omni | ECOVACS DEEBOT T80 OMNI | ロボット掃除機 | life | Yahoo | - | |
+| 7 | ienow-c2-ebike | イーノウ C2 電動アシスト自転車 20インチ | 電動アシスト自転車 | life | Yahoo | - | |
 | 8 | yamazaki-magnet-bottle-tray-plate | 山崎実業 マグネット ボトルホルダー＆トレー Plate | 収納グッズ | organize | Amazon | - | |
 | 9 | laptop-stand | ノートPCスタンド（スマホスタンド付き） | デスク環境 | gadget | Amazon | - | |
 | 10 | ugreen-vertical-pc-stand | UGREEN 縦型ノートパソコンスタンド | PCスタンド | desk | Amazon | - | |
