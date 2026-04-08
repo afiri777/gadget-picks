@@ -316,7 +316,7 @@
           スマートホーム化は一気にやらなくていい。まず掃除から自動化するのが一番効果が大きい。
         </p>
         <a class="btn-cta" href="https://yahoo.jp/h6EvjU6" target="_blank" rel="noopener noreferrer">
-          Eufy Robot Vacuum C10 をYahoo!ショッピングで見る →
+          価格を確認する →
         </a>
       </div>
     </div>
@@ -351,15 +351,11 @@
     countEl.textContent = '全部で' + items.length + '点。絞り込んでいます。';
 
     items.forEach(function(p) {
-      var btnLabel = p.asp === 'yahoo'
-        ? 'Yahoo!ショッピングで見る →'
-        : 'Amazonで見る →';
+      var btnLabel = '価格を確認する →';
 
       var subBtnHTML = '';
       if (p.asp_sub && p.link_sub) {
-        var subLabel = p.asp_sub === 'yahoo'
-          ? 'Yahoo!ショッピングでも見る'
-          : 'Amazonでも見る';
+        var subLabel = '他のショップで確認する';
         subBtnHTML =
           '<a class="btn-sub" href="' + p.link_sub + '" target="_blank" rel="noopener noreferrer">' +
             subLabel +
@@ -417,6 +413,17 @@
         '</div>';
 
       container.appendChild(card);
+
+      if (p.featured) {
+        card.style.cursor = 'pointer';
+        (function(link) {
+          card.addEventListener('click', function(e) {
+            if (!e.target.closest('a')) {
+              window.open(link, '_blank', 'noopener,noreferrer');
+            }
+          });
+        })(p.link);
+      }
     });
 
     if ('IntersectionObserver' in window) {

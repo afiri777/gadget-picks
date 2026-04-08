@@ -330,7 +330,7 @@
           「何を買えばいいか分からない」なら、まずこれ。
         </p>
         <a class="btn-cta" href="https://amzn.to/3PUltwW" target="_blank" rel="noopener noreferrer">
-          Anker MagGo Power Bank をAmazonで見る →
+          価格を確認する →
         </a>
       </div>
     </div>
@@ -370,18 +370,11 @@
     countEl.textContent = '全部で' + items.length + '点。絞り込んでいます。';
 
     items.forEach(function(p) {
-      // ---- 主導線ボタン文言（ASPで自動切り替え） ----
-      var btnLabel = p.asp === 'yahoo'
-        ? 'Yahoo!ショッピングで見る →'
-        : 'Amazonで見る →';
+      var btnLabel = '価格を確認する →';
 
-      // ---- 補助導線ボタン（asp_subが設定されている場合のみ表示） ----
-      // 同一商品の重複表示を避けるため、補助ボタンは最大1つ・控えめなデザインで出す
       var subBtnHTML = '';
       if (p.asp_sub && p.link_sub) {
-        var subLabel = p.asp_sub === 'yahoo'
-          ? 'Yahoo!ショッピングでも見る'
-          : 'Amazonでも見る';
+        var subLabel = '他のショップで確認する';
         subBtnHTML =
           '<a class="btn-sub" href="' + p.link_sub + '" target="_blank" rel="noopener noreferrer">' +
             subLabel +
@@ -439,6 +432,17 @@
         '</div>';
 
       container.appendChild(card);
+
+      if (p.featured) {
+        card.style.cursor = 'pointer';
+        (function(link) {
+          card.addEventListener('click', function(e) {
+            if (!e.target.closest('a')) {
+              window.open(link, '_blank', 'noopener,noreferrer');
+            }
+          });
+        })(p.link);
+      }
     });
 
     // スクロールアニメーション

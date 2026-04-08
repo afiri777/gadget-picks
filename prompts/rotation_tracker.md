@@ -19,7 +19,7 @@
 | 順番 | 商品ID | 商品名 | カテゴリ | ページ | ASP | 使用日 | 備考 |
 |------|--------|--------|----------|--------|-----|--------|------|
 | 1 | anker-maggo-10000 | Anker MagGo Power Bank 10000mAh 35W | モバイルバッテリー | gadget | Amazon | 2026-04-06 | |
-| 2 | logicool-mx-ergo | ロジクール MX ERGO トラックボールマウス | マウス | desk | Amazon | - | |
+| 2 | logicool-mx-ergo | ロジクール MX ERGO トラックボールマウス | マウス | desk | Amazon | 2026-04-07 | |
 | 3 | eufy-robot-vacuum-c10 | Anker Eufy Robot Vacuum Auto-Empty C10 | ロボット掃除機 | life | Yahoo | - | |
 | 4 | yamazaki-magnet-sponge-holder | 山崎実業 マグネット スポンジ＆ボトルホルダー | 収納グッズ | organize | Amazon | - | |
 | 5 | anker-charger-100w | Anker Charger 100W 3ポート | 充電器 | gadget | Amazon | - | |
