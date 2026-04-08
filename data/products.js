@@ -1082,7 +1082,7 @@ const PRODUCTS = [
     link_sub:    "",
     page:        "life",
     priority:    14,
-    status:      "active"
+    status:      "hold"
   },
   {
     id:          "sensor-trash-can-45l",
