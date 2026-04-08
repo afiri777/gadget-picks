@@ -280,7 +280,7 @@ const PRODUCTS = [
     link_sub:    "",
     page:        "gadget",
     priority:    11,
-    status:      "active"
+    status:      "hold"
   },
   {
     id:          "anker-maggo-10000-slim-yahoo",
@@ -478,7 +478,7 @@ const PRODUCTS = [
     link_sub:    "",
     page:        "gadget",
     priority:    20,
-    status:      "active"
+    status:      "hold"
   },
   {
     id:          "eufy-smarttrack-link",
@@ -857,7 +857,7 @@ const PRODUCTS = [
     link_sub:    "",
     page:        "desk",
     priority:    6,
-    status:      "active"
+    status:      "hold"
   },
   {
     id:          "hachiban-desk-under-storage",
