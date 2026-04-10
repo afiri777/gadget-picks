@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afiri777.github.io/gadget-picks/sitemap.xml

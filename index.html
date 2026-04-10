@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="失敗しにくい商品だけを厳選して紹介しています。ガジェット・便利グッズなど、カテゴリ別にまとめています。">
   <title>厳選まとめサイト｜失敗しにくいものだけ紹介</title>
+  <!-- OGP / SNSシェア用タグ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://afiri777.github.io/gadget-picks/">
+  <meta property="og:title" content="厳選まとめ｜失敗しにくいものだけ紹介">
+  <meta property="og:description" content="失敗しにくい商品だけを厳選して紹介。ガジェット・デスク・生活・収納・アウトドアなど、カテゴリ別にまとめています。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="厳選まとめ｜失敗しにくいものだけ紹介">
+  <meta name="twitter:description" content="失敗しにくい商品だけを厳選して紹介。ガジェット・デスク・生活・収納・アウトドアなど、カテゴリ別にまとめています。">
+  <!-- GA4（Googleアナリティクスで測定IDを取得後、G-XXXXXXXXXX を書き換えてコメントを外してください） -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -169,6 +186,38 @@
     }
     .site-footer p { font-size: 11px; color: #555; }
 
+    /* ピックアップ：各カテゴリのイチ推し */
+    .pickup { padding: 0 0 40px; }
+    .pickup-grid { display: flex; flex-direction: column; gap: 10px; }
+    .pickup-card {
+      background: var(--bg-card); border: 1px solid var(--accent-dim);
+      border-radius: var(--radius); padding: 14px 16px;
+      display: flex; align-items: center; gap: 12px;
+      transition: border-color 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .pickup-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .pickup-icon {
+      flex-shrink: 0; width: 48px; height: 48px;
+      background: #222; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+    }
+    .pickup-body { flex: 1; min-width: 0; }
+    .pickup-label { font-size: 10px; color: var(--text-sub); margin-bottom: 3px; letter-spacing: 0.04em; }
+    .pickup-name {
+      font-size: 13px; font-weight: 700; line-height: 1.4;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .pickup-price { font-size: 12px; color: var(--accent); font-weight: 700; margin-top: 2px; }
+    .pickup-btn {
+      flex-shrink: 0;
+      background: var(--accent); color: #000;
+      font-size: 11px; font-weight: 800;
+      padding: 8px 12px; border-radius: var(--radius-sm);
+      white-space: nowrap;
+    }
+
     @media (max-width: 400px) {
       .cat-grid { grid-template-columns: 1fr; }
     }
@@ -196,6 +245,15 @@
     </div>
   </section>
 
+  <!-- ピックアップ：各カテゴリのイチ推し1点ずつ -->
+  <section class="pickup">
+    <div class="container">
+      <h2 class="section-title">各カテゴリの<span>イチ推し</span></h2>
+      <p class="section-sub">失敗しにくいと思った1点ずつ厳選</p>
+      <div id="pickup-container" class="pickup-grid"></div>
+    </div>
+  </section>
+
   <section class="categories">
     <div class="container">
       <h2 class="section-title">カテゴリから<span>選ぶ</span></h2>
@@ -211,7 +269,7 @@
           <div class="cat-icon">🔋</div>
           <div class="cat-name">ガジェット・充電グッズ</div>
           <div class="cat-desc">モバイルバッテリー・充電器・イヤホンなど</div>
-          <div class="cat-count">38点掲載中</div>
+          <div class="cat-count">40点掲載中</div>
         </a>
 
         <!-- ========================================
@@ -223,14 +281,14 @@
           <div class="cat-icon">🖥️</div>
           <div class="cat-name">デスク・作業効率グッズ</div>
           <div class="cat-desc">テレワーク・在宅作業を整えるグッズ</div>
-          <div class="cat-count">23点掲載中</div>
+          <div class="cat-count">24点掲載中</div>
         </a>
 
         <a class="cat-card" href="./life/">
           <div class="cat-icon">🏠</div>
           <div class="cat-name">生活ラクするグッズ</div>
           <div class="cat-desc">掃除・スマートホーム・毎日の手間を減らすもの</div>
-          <div class="cat-count">27点掲載中</div>
+          <div class="cat-count">25点掲載中</div>
         </a>
 
         <a class="cat-card" href="./organize/">
@@ -263,6 +321,47 @@
 <footer class="site-footer">
   <p>© 2026 厳選まとめ</p>
 </footer>
+
+<script src="./data/products.js"></script>
+<script>
+(function() {
+  var container = document.getElementById('pickup-container');
+  if (!container || typeof PRODUCTS === 'undefined') return;
+
+  var pageLabels = {
+    gadget:  'ガジェット・充電グッズ',
+    desk:    'デスク・作業効率',
+    life:    '生活ラクするグッズ',
+    organize:'片付け・整理',
+    outdoor: 'アウトドア・キャンプ'
+  };
+  var pageOrder = ['gadget','desk','life','organize','outdoor'];
+
+  var featured = PRODUCTS.filter(function(p){
+    return p.featured === true && p.status === 'active';
+  });
+  featured.sort(function(a, b){
+    return pageOrder.indexOf(a.page) - pageOrder.indexOf(b.page);
+  });
+
+  featured.forEach(function(p) {
+    var card = document.createElement('a');
+    card.className = 'pickup-card';
+    card.href = p.link;
+    card.target = '_blank';
+    card.rel = 'noopener noreferrer';
+    card.innerHTML =
+      '<div class="pickup-icon">' + p.icon + '</div>' +
+      '<div class="pickup-body">' +
+        '<div class="pickup-label">' + (pageLabels[p.page] || p.page) + '</div>' +
+        '<div class="pickup-name">' + p.name + '</div>' +
+        '<div class="pickup-price">' + (p.price || '') + '</div>' +
+      '</div>' +
+      '<div class="pickup-btn">見る →</div>';
+    container.appendChild(card);
+  });
+})();
+</script>
 
 </body>
 </html>
