@@ -2732,8 +2732,8 @@ const PRODUCTS = [
     link_sub:      "",
     page:          "outdoor",
     priority:      10,
-    status:        "active"
-  }
+    status:        "active",
+  },
 
 
   // ─── 寝袋 ───────────────────────────────
