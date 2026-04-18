@@ -303,6 +303,13 @@
           <div class="cat-count">18点掲載中</div>
         </a>
 
+        <a class="cat-card" href="./kitchen/">
+          <div class="cat-icon">🍳</div>
+          <div class="cat-name">キッチン家電・料理グッズ</div>
+          <div class="cat-desc">BRUNO・デロンギ・バルミューダなど料理の手間を減らすもの</div>
+          <div class="cat-count">8点掲載中</div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -331,9 +338,10 @@
     desk:    'デスク・作業効率',
     life:    '生活ラクするグッズ',
     organize:'片付け・整理',
-    outdoor: 'アウトドア・キャンプ'
+    outdoor: 'アウトドア・キャンプ',
+    kitchen: 'キッチン家電・料理グッズ'
   };
-  var pageOrder = ['gadget','desk','life','organize','outdoor'];
+  var pageOrder = ['gadget','desk','life','organize','outdoor','kitchen'];
 
   var featured = PRODUCTS.filter(function(p){
     return p.featured === true && p.status === 'active';
