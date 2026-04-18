@@ -85,6 +85,32 @@
 
 ---
 
+## リンク導線ルール（2026-04-18更新・必須）
+
+GA4で訪問者0が判明。プロフリンクへの誘導が弱いため以下を徹底する。
+
+### カテゴリ別URL
+| テーマ | URL |
+|--------|-----|
+| ガジェット・充電・イヤホン | https://afiri777.github.io/gadget-picks/gadget/ |
+| デスク・テレワーク・PC周辺 | https://afiri777.github.io/gadget-picks/desk/ |
+| 掃除・スマートホーム・家事 | https://afiri777.github.io/gadget-picks/life/ |
+| 収納・片付け・整理 | https://afiri777.github.io/gadget-picks/organize/ |
+| アウトドア・キャンプ | https://afiri777.github.io/gadget-picks/outdoor/ |
+| 全体紹介 | https://afiri777.github.io/gadget-picks/ |
+
+### 投稿末尾CTA（省略禁止）
+- 商品名を具体的に書く（「便利グッズ」などの曖昧表現NG）
+- カテゴリ直リンクURLを必ず入れる
+- 「まとめはプロフのリンクから」だけで終わるのはNG
+
+**OKパターン：**
+[商品名]の詳細と購入先をまとめてある。
+気になる人はここから飛んでみて。
+→ https://afiri777.github.io/gadget-picks/[category]/
+
+---
+
 ## 出力形式（固定）
 1投稿ずつ独立したブロックで出す。各投稿をそのままコピペできる形式。
 投稿と投稿の間は「---」で区切る。ラベルは投稿文の外に置く。
