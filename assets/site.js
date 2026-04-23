@@ -10,7 +10,7 @@
      Config
   ============================================================ */
   var LANG_KEY  = 'gp_lang';
-  var BASE      = '/gadget-picks';  // GitHub Pages base path
+  var BASE      = '';  // Netlify: no sub-path needed
   var lang      = localStorage.getItem(LANG_KEY) || 'ja';
 
   var CATEGORIES = [
