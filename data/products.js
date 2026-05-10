@@ -2104,6 +2104,102 @@ const PRODUCTS = [
     status:        "active"
   },
 
+  // --------------------------------------------------------
+  // 銭湯・サウナグッズ
+  // --------------------------------------------------------
+
+  {
+    id:            "nestray-toiletry-bag-s",
+    name:          "Nestray トイレタリーバッグ 防水（S/24cm）",
+    copy:          "濡れたまま放り込めるサウナポーチ",
+    category:      "銭湯・サウナ",
+    icon:          "🛁",
+    badge:         "サウナ民に人気",
+    description:   "濡れたアメニティをそのまま収納できる完全防水ポーチ。銭湯・サウナ後にタオルや洗顔料を濡れたまま入れてもOK。24×17cmのコンパクトサイズで荷物に溶け込む。",
+    fit_good:      "銭湯・サウナに週1以上通う人、旅行の荷物を減らしたい人",
+    fit_bad:       "家の洗面台だけで使う人、大容量が欲しい人（→Lサイズ推奨）",
+    note:          "",
+    price:         "¥1,980〜",
+    asp:           "amazon",
+    link:          "https://amzn.to/4eEil2D",
+    asp_sub:       "yahoo",
+    link_sub:      "https://yahoo.jp/ZYMxw6",
+    featured:      false,
+    sub_category:  "銭湯・サウナグッズ",
+    page:          "life",
+    priority:      26,
+    status:        "active"
+  },
+
+  {
+    id:            "nestray-toiletry-bag-l",
+    name:          "Nestray トイレタリーバッグ 防水バックル式（L/28cm）",
+    copy:          "銭湯セットをまるごと持ち歩く",
+    category:      "銭湯・サウナ",
+    icon:          "🛁",
+    badge:         "",
+    description:   "バックル式で開閉しやすい大容量防水ポーチ。シャンプー・ボディソープ・着替えまでまとめて収納でき、中身が濡れていても気にならない。マチ9cmで見た目より入る。",
+    fit_good:      "荷物が多い人、家族分まとめて持ちたい人、サウナ長居派",
+    fit_bad:       "最小限の荷物で行きたい人（→Sサイズ推奨）",
+    note:          "",
+    price:         "¥2,480〜",
+    asp:           "amazon",
+    link:          "https://amzn.to/4tKqExX",
+    asp_sub:       "yahoo",
+    link_sub:      "https://yahoo.jp/C6A_iZ",
+    featured:      false,
+    sub_category:  "銭湯・サウナグッズ",
+    page:          "life",
+    priority:      27,
+    status:        "active"
+  },
+
+  {
+    id:            "travel-bottle-6set-gray",
+    name:          "トラベルボトル 漏れない 6点セット（90ml・グレー）",
+    copy:          "スキンケアをそのまま旅先・銭湯へ",
+    category:      "銭湯・サウナ",
+    icon:          "🧴",
+    badge:         "",
+    description:   "スキンケアスペシャリスト監修の詰め替えボトルセット。漏れないストッパー付きで旅行カバンに入れても安心。ボトル3本・アトマイザー・透明ポーチ・ラベル・ブラシまで全部入り。",
+    fit_good:      "化粧水・美容液を旅先でも使いたい人、銭湯に自分のケア用品を持ち込む人",
+    fit_bad:       "使い捨てパックで済ませる人、100均ボトルで充分な人",
+    note:          "",
+    price:         "¥1,980〜",
+    asp:           "amazon",
+    link:          "https://amzn.to/4tr88KM",
+    asp_sub:       "yahoo",
+    link_sub:      "https://yahoo.jp/B5aHSP",
+    featured:      false,
+    sub_category:  "銭湯・サウナグッズ",
+    page:          "life",
+    priority:      28,
+    status:        "active"
+  },
+
+  {
+    id:            "mrsdry-travel-bottle-4set",
+    name:          "Mrsdry トラベルボトル 4本セット 2024年新型（収納ポーチ付）",
+    copy:          "客室乗務員も選ぶ、漏れない詰め替えセット",
+    category:      "銭湯・サウナ",
+    icon:          "🧴",
+    badge:         "客室乗務員推薦",
+    description:   "三重フタ構造で逆さにしても漏れない2024年新型。客室乗務員推薦のタフさがあり、機内持ち込みや出張にも使いやすい。収納ポーチ付きで持ち運びもスマート。",
+    fit_good:      "出張・旅行が多い人、機内持ち込みを想定している人",
+    fit_bad:       "自宅使いメインの人、大容量が必要な人",
+    note:          "",
+    price:         "¥1,580〜",
+    asp:           "amazon",
+    link:          "https://amzn.to/4cZHELo",
+    asp_sub:       "yahoo",
+    link_sub:      "https://yahoo.jp/V_9CsS",
+    featured:      false,
+    sub_category:  "銭湯・サウナグッズ",
+    page:          "life",
+    priority:      29,
+    status:        "active"
+  },
+
   // ========================================================
   // 片付け・整理グッズ（page: "organize"）
   // ========================================================
